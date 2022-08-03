@@ -16,7 +16,7 @@
         renderer='antialias: true; alpha: true "colorManagement: true;'>
             <a-camera gps-projected-camera rotation-reader></a-camera>
             <a-assets>
-              <a-asset-item id="engine" src="models/engine.glb"></a-asset-item>
+              <!-- <a-asset-item id="engine" src="models/engine.glb"></a-asset-item> -->
               <a-mixin id="image" geometry="height: 2; width: 2"></a-mixin>
               <a-mixin id="delayVisible" event-set__loaded="visible: true" visible="false"></a-mixin>
               <audio id="blip1" src="audio/321103__nsstudios__blip1.wav"></audio>
@@ -42,7 +42,7 @@
               <a-camera position="0 0 0" near="0.1"></a-camera>
             </a-entity>
       
-            <a-entity position="0 0 -3">
+            <!-- <a-entity position="0 0 -3">
               <a-gltf-model src="#engine" rotation="90 0 0" scale="18 18 18"></a-gltf-model>
             </a-entity>
       
@@ -117,7 +117,7 @@
                 <a-plane width="6" height="4" color="#586266" opacity="0.6" position="0 0 -.01"></a-plane>
               </a-entity>
             </a-entity>
-      
+       -->
             <a-entity id="schematic-2" position="0 0 -6" scale="0.7 0.7 0.7">
               <a-image mixin="image delayVisible" src="#glow1" scale="5 5 5" position="0 0 -2" event-set__loaded="_delay: 1500"></a-image>
               <a-image mixin="image delayVisible" src="#ring2" scale="1.75 1.75 1.75" position="0 0 -1.2" event-set__loaded="_delay: 1400"></a-image>
