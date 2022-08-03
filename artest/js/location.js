@@ -19,7 +19,8 @@ function distance(lat1, lon1, lat2, lon2) {
       return (this * Math.PI) / 180;
     };
   }
-  
+  const btnSave = document.querySelector('#save')
+  document.addEventListener(btnSave, click, onSaveNewPlace)
   function updateItems() {
     document.getElementById("updateContainer").style.display = "none";
     document.getElementById("ar-button").style.display = "block";

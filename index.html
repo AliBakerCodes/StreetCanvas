@@ -16,8 +16,7 @@
   </head>
 
   <body>
-    <script type="text/javascript" src="/js/location.js"></script>
-    <script type="text/javascript" src="/js/places.js"></script>
+    
 
     <div id="header-container"></div>
     <model-viewer
@@ -48,14 +47,14 @@
     </div>
 
     <p>Enter new location:</p>
-    <form id="form" action="javascript:onSaveNewPlace()">
+    <form id="form">
       <label for="fname">Name:</label><br />
       <input type="text" id="name" /><br />
       <label for="fname">Latitude:</label><br />
       <input type="number" id="lat" step="any" /><br />
       <label for="lname">Longitude:</label><br />
       <input type="number" id="lon" step="any" /><br /><br />
-      <input type="submit" value="Submit" />
+      <input type="button" id="save" value="Save"/>
     </form>
 
     <section id="section1" style="display: none">
@@ -76,5 +75,7 @@
         neque. Nunc id bibendum urna. Etiam id blandit elit.
       </p>
     </section>
+    <script type="text/javascript" src="/js/location.js"></script>
+    <script type="text/javascript" src="/js/places.js"></script>
   </body>
 </html>
