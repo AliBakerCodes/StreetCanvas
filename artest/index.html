@@ -5,9 +5,7 @@
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
         <!-- Look-at component. We don't need this now, but we will later. -->
         <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@744e2b869e281f840cff7d9cb02e95750ce90920/dist/aframe-master.min.js"></script>
         <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
-        
     </head>
     <body>
     <a-scene
@@ -16,7 +14,7 @@
         renderer='antialias: true; alpha: true "colorManagement: true;'>
             <a-camera gps-projected-camera rotation-reader></a-camera>
             <a-assets>
-              <a-asset-item id="engine" src="models/engine.glb"></a-asset-item>
+              <a-asset-item id="engine" src="https://aframe.io/examples/showcase/anime-UI/models/engine.glb"></a-asset-item>
               <a-mixin id="image" geometry="height: 2; width: 2"></a-mixin>
               <a-mixin id="delayVisible" event-set__loaded="visible: true" visible="false"></a-mixin>
               <audio id="blip1" src="audio/321103__nsstudios__blip1.wav"></audio>
