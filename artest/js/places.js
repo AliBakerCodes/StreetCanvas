@@ -17,15 +17,15 @@ function getPlacesOnLocalStorage() {
 
 function findNearestPlaces(userLat, userLong) {
   let nearestPlaces = [];
-
+  console.log("Places", places)
   console.log("Your latitude: " + userLat, "Your longitude: " + userLong);
 
   places.map((place) => {
     if (
       distance(userLat, userLong, place.location[0], place.location[1]) * 1000 <
-      100
+      5
     ) {
-      //If it's at 100 meters or less
+      //If it's at 5 meters or less
       nearestPlaces.push(place);
     }
   });
