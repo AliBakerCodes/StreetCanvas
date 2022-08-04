@@ -19,8 +19,8 @@ if (typeof Number.prototype.toRad === "undefined") {
     return (this * Math.PI) / 180;
   };
 }
-const latEl = document.querySelector("#dispLat");
-const lonEl = document.querySelector("#dispLon");
+var latEl = document.querySelector("#dispLat");
+var lonEl = document.querySelector("#dispLon");
 
 function updateItems() {
   document.getElementById("updateContainer").style.display = "none";
