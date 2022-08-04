@@ -1,4 +1,6 @@
 let places = [];
+var latEl = document.querySelector("#dispLat");
+var lonEl = document.querySelector("#dispLon");
 getPlacesOnLocalStorage();
 function getPlacesOnLocalStorage() {
   let elementsSplitted = [];
@@ -19,7 +21,8 @@ function findNearestPlaces(userLat, userLong) {
   let nearestPlaces = [];
   console.log("Places", places)
   console.log("Your latitude: " + userLat, "Your longitude: " + userLong);
-
+  latEl.textContent=userLat;
+  lonEl.textContent=userLong;
   places.map((place) => {
     if (
       distance(userLat, userLong, place.location[0], place.location[1]) * 1000 <

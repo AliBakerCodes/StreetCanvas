@@ -19,8 +19,6 @@ if (typeof Number.prototype.toRad === "undefined") {
     return (this * Math.PI) / 180;
   };
 }
-var latEl = document.querySelector("#dispLat");
-var lonEl = document.querySelector("#dispLon");
 
 function updateItems() {
   document.getElementById("updateContainer").style.display = "none";
@@ -103,8 +101,6 @@ let nearestPlaces = [];
 let newItemsFound = false;
 
 function success(position) {
-  latEl.textContent=position.coords.latitude;
-  lonEl.textContent=position.coords.longitude;
   let nearestPlacesUpdated = findNearestPlaces(
     position.coords.latitude,
     position.coords.longitude
