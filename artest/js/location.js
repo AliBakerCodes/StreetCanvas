@@ -116,7 +116,7 @@ function success(position) {
     newItemsFound = true;
     document.getElementById("updateContainer").style.display = "block";
     document.getElementById("ar-button").style.display = "none";
-    document.getElementById("section1").style.display = "none";
+    // document.getElementById("section1").style.display = "none";
   }
 }
 
