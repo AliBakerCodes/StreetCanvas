@@ -26,7 +26,7 @@ function findNearestPlaces(userLat, userLong) {
   places.map((place) => {
     if (
       distance(userLat, userLong, place.location[0], place.location[1]) * 1000 <
-      place.radius[0]
+      (place.radius[0] ? place.radius[0] : 5)
     ) {
       //If it's within the radius
       nearestPlaces.push(place);
