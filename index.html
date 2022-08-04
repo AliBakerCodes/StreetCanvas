@@ -47,7 +47,7 @@
       <button class="update-button" onclick="updateItems()">Update</button>
     </div>
     <p>Lattitude: <span id="dispLat"></span> Longitude:<span id="dispLon"></span></p>
-    <p>Enter new location:</p>
+    <p>Peg Location</p>
     <form id="form" action="javascript:onSaveNewPlace()">
       <label for="fname">Name:</label><br />
       <input type="text" id="name" /><br />
@@ -55,6 +55,9 @@
       <input type="number" id="lat" step="any" /><br />
       <label for="lname">Longitude:</label><br />
       <input type="number" id="lon" step="any" /><br /><br />
+      <label for="lname">Radius:</label><br />
+      <input type="number" id="rad" step="any" /><br /><br />
+      <button id="useCurrentLocation" class="update-button" onclick="useCurrentLocation()">Use Current Location</button>
       <input type="submit" value="Submit" />
     </form>
 
