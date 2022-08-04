@@ -16,8 +16,7 @@
   </head>
 
   <body>
-    <script type="text/javascript" src="artest/js/location.js"></script>
-    <script type="text/javascript" src="artest/js/places.js"></script>
+    
 
     <div id="header-container"></div>
     <model-viewer
@@ -44,7 +43,7 @@
       <b style="color: green; float: left; margin: 0 10px 0 0">
         New objects has been found
       </b>
-      <button class="update-button" onclick="updateItems()">Update</button>
+      <button id="btnUpdate" class="update-button">Update</button>
     </div>
     <p>Lattitude: <span id="dispLat"></span> Longitude:<span id="dispLon"></span></p>
     <p>Peg Location</p>
@@ -57,9 +56,12 @@
       <input type="number" id="lon" step="any" /><br /><br />
       <label for="lname">Radius:</label><br />
       <input type="number" id="rad" step="any" /><br /><br />
-      <button id="useCurrentLocation" class="update-button" onclick="useCurrentLocation()">Use Current Location</button>
-      <input type="submit" value="Submit" />
+      <button id="btnUseLoc">Use Current Location</button>
+      <button id="addPeg" onclick="useCurrentLocation()">Use Current Location</button>
     </form>
+    
+    <script type="text/javascript" src="artest/js/places.js"></script>
+    <script type="text/javascript" src="artest/js/location.js"></script>
     <script type="text/javascript" src="artest/js/index.js"></script>
   </body>
 </html>

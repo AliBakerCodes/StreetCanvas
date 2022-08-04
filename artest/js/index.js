@@ -1,3 +1,7 @@
+const btnUpdateEl = document.querySelector("#btnUpdate")
+const btnAddPegEl = document.querySelector("#btnAddPeg")
+const btnUseLocEl = document.querySelector("#btnUseLoc")
+
 function toFixed(num, fixed) {
     var re = new RegExp('^-?\\d+(?:\.\\d{0,' + (fixed || -1) + '})?');
     return num.toString().match(re)[0];
@@ -11,3 +15,7 @@ function useCurrentLocation() {
     lat.value = toFixed(latEl.textContent, 6)
     lon.value = toFixed(lonEl.textContent, 6)
 };
+
+btnUpdateEl.addEventListener("click",updateItems);
+btnAddPegEl.addEventListener("click",onSaveNewPlace);
+btnUseLocEl.addEventListener("click",useCurrentLocation);
