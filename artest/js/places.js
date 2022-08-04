@@ -21,8 +21,8 @@ function findNearestPlaces(userLat, userLong) {
   let nearestPlaces = [];
   console.log("Places", places)
   console.log("Your latitude: " + userLat, "Your longitude: " + userLong);
-  latEl.textContent=userLat;
-  lonEl.textContent=userLong;
+  latEl.innerHTML=userLat;
+  lonEl.innerHTML=userLong;
   places.map((place) => {
     if (
       distance(userLat, userLong, place.location[0], place.location[1]) * 1000 <
