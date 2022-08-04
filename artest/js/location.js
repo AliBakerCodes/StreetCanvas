@@ -103,8 +103,8 @@ let nearestPlaces = [];
 let newItemsFound = false;
 
 function success(position) {
-  latEl.innerHTML=position.coords.latitude;
-  lonEl.innerHTML=position.coords.longitude;
+  latEl.textContent=position.coords.latitude;
+  lonEl.textContent=position.coords.longitude;
   let nearestPlacesUpdated = findNearestPlaces(
     position.coords.latitude,
     position.coords.longitude
