@@ -28,7 +28,7 @@ function findNearestPlaces(userLat, userLong) {
   places.map((place) => {
     if (
       distance(userLat, userLong, place.location[0], place.location[1]) * 1000 <
-      5
+      
     ) {
       //If it's at 5 meters or less
       nearestPlaces.push(place);
@@ -47,9 +47,9 @@ function onSaveNewPlace(event) {
     place["name"] = name;
     place["location"] = [+lat, +lon];
     place["glb"] =
-      "https://cdn.glitch.com/1d15db40-d305-405d-b697-7d66fdeeec79%2FAstronaut.glb";
+      "./assets/3dmodels/NeilArmstrong.glb";
     place["usdz"] =
-      "https://cdn.glitch.com/1d15db40-d305-405d-b697-7d66fdeeec79%2FAstronaut.usdz";
+      "./assets/3dmodels/toy_drummer.usdz";
     place["image"] =
       "https://cdn.glitch.com/1d15db40-d305-405d-b697-7d66fdeeec79%2FAstronaut.png";
   }
