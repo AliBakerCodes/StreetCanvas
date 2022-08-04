@@ -133,8 +133,8 @@ function error() {
 
 const options = {
   enableHighAccuracy: true,
-  maximumAge: 300000,
-  timeout: 300000, //Five minutes
+  maximumAge: 500,
+  timeout: 1000, //Five minutes
 };
 
 const watchID = navigator.geolocation.watchPosition(success, error, options);
