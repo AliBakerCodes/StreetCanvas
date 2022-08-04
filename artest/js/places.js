@@ -21,6 +21,8 @@ function findNearestPlaces(userLat, userLong) {
   let nearestPlaces = [];
   console.log("Places", places)
   console.log("Your latitude: " + userLat, "Your longitude: " + userLong);
+  const latEl = document.querySelector("#dispLat");
+  const lonEl = document.querySelector("#dispLon");
   latEl.innerHTML=userLat;
   lonEl.innerHTML=userLong;
   places.map((place) => {
