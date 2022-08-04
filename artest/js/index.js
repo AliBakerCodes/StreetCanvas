@@ -7,7 +7,8 @@ function toFixed(num, fixed) {
     return num.toString().match(re)[0];
 }
 
-function useCurrentLocation() {
+function useCurrentLocation(event) {
+    event.preventDefault();
     const latEl = document.querySelector("#dispLat");
     const lonEl = document.querySelector("#dispLon");
     const lat = document.getElementById("lat");
