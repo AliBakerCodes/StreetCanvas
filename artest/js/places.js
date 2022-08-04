@@ -23,6 +23,7 @@ function findNearestPlaces(userLat, userLong) {
   const lonEl = document.querySelector("#dispLon");
   latEl.innerHTML=userLat;
   lonEl.innerHTML=userLong;
+  if(places){
   places.map((place) => {
     if (
       distance(userLat, userLong, place.location[0], place.location[1]) * 1000 <
@@ -33,6 +34,7 @@ function findNearestPlaces(userLat, userLong) {
     }
   });
   return nearestPlaces;
+  }
 }
 
 
