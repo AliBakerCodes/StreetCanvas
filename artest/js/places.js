@@ -50,11 +50,11 @@ function onSaveNewPlace(event) {
     place["name"] = name;
     place["location"] = [+lat, +lon];
     place["glb"] =
-      "./assets/3dmodels/NeilArmstrong.glb";
+      ".artest//assets/3dmodels/NeilArmstrong.glb";
     place["usdz"] =
-      "./assets/3dmodels/toy_drummer.usdz";
+      ".artest/assets/3dmodels/toy_drummer.usdz";
     place["image"] =
-      "https://cdn.glitch.com/1d15db40-d305-405d-b697-7d66fdeeec79%2FAstronaut.png";
+      ".artest/assets/img/astro.png";
     place["radius"] = rad;
   }
 
