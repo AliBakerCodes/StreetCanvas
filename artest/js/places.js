@@ -52,7 +52,7 @@ function onSaveNewPlace(event) {
     place["glb"] =
       "./artest/assets/3dmodels/NeilArmstrong.glb";
     place["usdz"] =
-      "./artest/assets/3dmodels/NeilArmstrong.glb";
+      "./artest/assets/3dmodels/NeilArmstrong.usdz";
     place["image"] =
       "./artest/assets/img/astro.png";
     place["radius"] = rad;
