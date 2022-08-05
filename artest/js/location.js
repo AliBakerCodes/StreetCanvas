@@ -23,7 +23,7 @@ if (typeof Number.prototype.toRad === "undefined") {
 function updateItems() {
   document.getElementById("updateContainer").style.display = "none";
   document.getElementById("ar-button").style.display = "block";
-  document.getElementById("section1").style.display = "block";
+  // document.getElementById("section1").style.display = "block";
 
   const modelViewer = document.querySelector("model-viewer");
 
