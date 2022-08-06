@@ -76,7 +76,7 @@ genSlides = (user) => {
 genSlides(myUser);
 
 //Listen clicks on slides
-window.switchSrc = (element, name) => {
+switchSrc = (element, name) => {
     user.models.forEach((model) => {
       if (model.name == name) {
         console.log(model);
