@@ -16,14 +16,14 @@ model-viewer {
   height: 70vh;
   --poster-color: #eee;
 }
-#ar-button-container{
+#ar-button{
   position: absolute;
-  left:50%;
+  left:33%;
 }
 .ar-button {
   background-color: #fff;
   position: absolute;
-  /* left: 50%; */
+  left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
   bottom: 132px;
