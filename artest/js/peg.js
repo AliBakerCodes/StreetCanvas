@@ -44,7 +44,7 @@ const astro = new model("Astronaught", "./assets/3dmodels/NeilArmstrong.glb", ".
 myUser.models.push(astro)
 const witch = new model("Fire Witch", "./assets/3dmodels/Fire_Witch.glb", "./assets/3dmodels/Fire_Witch.usdz","./assets/img/Fire_Witch.png")
 myUser.models.push(witch)
-const reaper = new model("Reaper", "./assets/3dModels/Reaper.glb","", "./assets/img/Reaper.png")
+const reaper = new model("Sugar Skull", "./assets/3dModels/Sugar_Skull.glb","", "./assets/img/Sugar_Skull.png")
 myUser.models.push(reaper)
 
 console.log("myUser", myUser);
@@ -118,6 +118,7 @@ function switchSrc(element, name) {
 
 function addPegHandler(event) {
     event.preventDefault();
+
 };
 
 document.addEventListener("DOMContentLoaded", (event) => {

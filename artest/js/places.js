@@ -38,8 +38,7 @@ function findNearestPlaces(userLat, userLong) {
 }
 
 
-function onSaveNewPlace(event) {
-  event.preventDefault();
+function onSaveNewPlace(lat, lon, radius) {
   const name = document.getElementById("name").value;
   const lat = document.getElementById("lat").value;
   const lon = document.getElementById("lon").value;
