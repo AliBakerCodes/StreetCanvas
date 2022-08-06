@@ -9,13 +9,13 @@ function Footer (){
               <footer className="footer mt-auto py-3 bg-light">
         <div className="container row m-0 gx-3">
             <div className="col">
-                <button type="button p-2" className="btn btn-outline-success btn-circle btn-md"></button>
+                <button type="button p-2" className="btn btn-outline-success btn-circle btn-md">Explore</button>
             </div>
             <div className="col">
-                <button type="button p-2" className="btn btn-outline-success btn-circle btn-md"></button>     
+                <button type="button p-2" className="btn btn-outline-success btn-circle btn-md">View</button>     
            </div>
             <div className="col">
-                    <button type="button p-2" className="btn btn-outline-success btn-circle btn-md"></button>    
+                    <button type="button p-2" className="btn btn-outline-success btn-circle btn-md">Upload</button>    
             </div>
             <div className="col">
                 <button type="button" className="btn btn-outline-success btn-circle btn-md"></button>
