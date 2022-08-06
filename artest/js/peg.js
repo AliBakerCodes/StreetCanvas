@@ -44,7 +44,7 @@ const astro = new model("Astronaught", "/assets/3dmodels/NeilArmstrong.glb", "/a
 myUser.models.push(astro)
 const witch = new model("Fire Witch", "/assets/3dmodels/Fire_Witch.glb", "/assets/3dmodels/Fire_Witch.usdz","/artest/assets/img/Fire_Witch.png")
 myUser.models.push(witch)
-const reaper = new model("Reaper", "/assets/img/Reaper.glb",null,"/assets/img/Reaper.png")
+const reaper = new model("Reaper", "/assets/img/Reaper.glb","", "/assets/img/Reaper.png")
 myUser.models.push(reaper)
 
 console.log("myUser", myUser);
@@ -61,7 +61,7 @@ genSlides = (user) => {
         noModelsEl.classList.add("HIDE");
         mvContainerEl.classList.remove("HIDE");
         user.models.forEach((model) => {
-            const slide =`<button class="slide selected" onclick="switchSrc(this, "${model.name}")" style="background-image: url('${model.thumbnail}');">`
+            const slide =`<button class="slide selected" onclick="switchSrc(this, '${model.name}')" style="background-image: url('${model.thumbnail}');">`
             slideContainerEL.innerHTML+=slide;
         });
         const firstSlide= slideContainerEL.firstChild
