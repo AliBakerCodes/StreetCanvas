@@ -73,7 +73,7 @@ genSlides = (user) => {
     
 }
 
-genSlides();
+genSlides(myUser);
 
 //Listen clicks on slides
 window.switchSrc = (element, name) => {
