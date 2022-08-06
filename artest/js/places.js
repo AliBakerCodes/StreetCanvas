@@ -40,17 +40,12 @@ function findNearestPlaces(userLat, userLong) {
 
 function onSaveNewPlace(lat, lon, radius, model) {
   let place = {};
-  if (lat.toString().includes(".") && lon.toString().includes(".")) {
-    place["name"] = name;
+    place["name"] = model.name;
     place["location"] = [+lat, +lon];
-    place["glb"] =
-      "./artest/assets/3dmodels/NeilArmstrong.glb";
-    place["usdz"] =
-      "./artest/assets/3dmodels/NeilArmstrong.usdz";
-    place["image"] =
-      "./artest/assets/img/astro.png";
-    place["radius"] = rad;
-  }
+    place["glb"] = model.glb;
+    place["usdz"] = model.usdz;
+    place["image"] = model.thumbnail;
+    place["radius"] = radius;
 
   //Save values
   places.push(place);
@@ -61,9 +56,6 @@ function onSaveNewPlace(lat, lon, radius, model) {
 
   //Clear values
   place = {};
-  document.getElementById("name").value = "";
-  document.getElementById("lat").value = "";
-  document.getElementById("lon").value = "";
 
   location.reload();
 }

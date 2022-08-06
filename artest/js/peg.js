@@ -6,6 +6,7 @@ const slides = document.querySelectorAll(".slide");
 const slideContainerEL=document.querySelector("#slide-container");
 var modelViewer = document.getElementById("model-viewer");
 const noModelsEl = document.querySelector("#noModels");
+const radiusEL= document.querySelector("#inpt-radius")
 let userLat;
 let userLong;
 
@@ -123,6 +124,7 @@ function switchSrc(element, name) {
 
 function addPegHandler(event) {
     event.preventDefault();
+    onSaveNewPlace(userLat,userLong, radiusEL.value,myUser)
 
 };
 

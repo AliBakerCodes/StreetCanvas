@@ -16,10 +16,6 @@ model-viewer {
   height: 70vh;
   --poster-color: #eee;
 }
-#ar-button{
-  position: absolute;
-  left:25%;
-}
 
 #inpt-radius{
   width:15px;
