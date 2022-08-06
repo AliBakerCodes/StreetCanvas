@@ -84,7 +84,7 @@ function switchSrc(element, name) {
         console.log(model);
   
         modelViewer.setAttribute("src", model.glb);
-        if(model.usdz){ 
+        if(model.usdz !=""){ 
             modelViewer.setAttribute("ios-src", model.usdz);
         };
         //Cambia el selected del boton
