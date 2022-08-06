@@ -87,7 +87,7 @@ function switchSrc(element, name) {
         if(model.glb !=""){ 
             modelViewer.setAttribute("src", model.glb);
         } else {
-            modelViewer.removeAttribute("src");
+            modelViewer.setAttribute("src","null.glb");
         };    
         if(model.usdz !=""){ 
             modelViewer.setAttribute("ios-src", model.usdz);
