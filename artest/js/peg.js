@@ -40,11 +40,11 @@ function user(name, models){
 const myUser = new user("Ali");
 myUser["models"] = [];
 
-const astro = new model("Astronaught", "../assets/3dmodels/NeilArmstrong.glb", "../assets/3dmodels/NeilArmstrong.usdz", "../artest/assets/img/neil.png")
+const astro = new model("Astronaught", "/assets/3dmodels/NeilArmstrong.glb", "/assets/3dmodels/NeilArmstrong.usdz", "/artest/assets/img/neil.png")
 myUser.models.push(astro)
-const witch = new model("Fire Witch", "../assets/3dmodels/Fire_Witch.glb", "../assets/3dmodels/Fire_Witch.usdz","../artest/assets/img/Fire_Witch.png")
+const witch = new model("Fire Witch", "/assets/3dmodels/Fire_Witch.glb", "/assets/3dmodels/Fire_Witch.usdz","/artest/assets/img/Fire_Witch.png")
 myUser.models.push(witch)
-const reaper = new model("Reaper", "../assets/img/Reaper.glb",null,"../assets/img/Reaper.png")
+const reaper = new model("Reaper", "/assets/img/Reaper.glb",null,"/assets/img/Reaper.png")
 myUser.models.push(reaper)
 
 console.log("myUser", myUser);
