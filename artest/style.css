@@ -20,12 +20,14 @@ model-viewer {
 #inpt-radius{
   width:15px;
 }
+#ar-button {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
 
 .ar-button {
   background-color: #fff;
-  position: absolute;
-  top: 100px;
-  left: 2px;
   margin: 0,10px,0,10px;
   transform: translateX(-50%);
   white-space: nowrap;
