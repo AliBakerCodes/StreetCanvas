@@ -112,8 +112,8 @@ function switchSrc(element, name) {
     console.log("Your latitude: " + userLat, "Your longitude: " + userLong);
     const latEl = document.querySelector("#dispLat");
     const lonEl = document.querySelector("#dispLon");
-    latEl.innerHTML=userLat;
-    lonEl.innerHTML=userLong;
+    latEl.innerHTML=toFixed(userLat);
+    lonEl.innerHTML=toFixed(userLong);
   }
 
 function addPegHandler(event) {
