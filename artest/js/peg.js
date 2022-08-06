@@ -70,6 +70,8 @@ genSlides = (user) => {
     
 }
 
+genSlides();
+
 //Listen clicks on slides
 window.switchSrc = (element, name) => {
     user.models.forEach((model) => {
