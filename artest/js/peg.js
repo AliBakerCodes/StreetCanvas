@@ -1,4 +1,4 @@
-const btnAddPegEl = document.querySelector("#btnAddPeg")
+const btnAddPegEl = document.querySelector("#add-peg-btn")
 const header_container = document.getElementById("header-container");
 const mvContainerEl = document.querySelector("#mvContainer");
 const slider = document.getElementById("slider");

@@ -22,10 +22,12 @@ model-viewer {
 }
 #ar-button {
   position: absolute;
-  top: 100px;
-  left: 50px;
+  left: 100px;
 }
-
+#add-peg-btn{
+  position: absolute;
+  left: 50%;
+}
 .ar-button {
   background-color: #fff;
   margin: 0,10px,0,10px;
