@@ -6,6 +6,9 @@ const slides = document.querySelectorAll(".slide");
 const slideContainerEL=document.querySelector("#slide-container");
 var modelViewer = document.getElementById("model-viewer");
 const noModelsEl = document.querySelector("#noModels");
+let userLat;
+let userLong;
+
 // getModels();
 // function getModels() {
 //   let elementsSplitted = [];
@@ -93,16 +96,18 @@ window.switchSrc = (element, name) => {
       }
     });
   };
-
-
-function useCurrentLocation(event) {
-    event.preventDefault();
+  function success(position) {
+    userLat = position.coords.latitude;
+    userLong= position.coords.longitude;
+    console.log("Your latitude: " + userLat, "Your longitude: " + userLong);
     const latEl = document.querySelector("#dispLat");
     const lonEl = document.querySelector("#dispLon");
-    const lat = document.getElementById("lat");
-    const lon = document.getElementById("lon");
-    lat.value = toFixed(latEl.textContent, 6)
-    lon.value = toFixed(lonEl.textContent, 6)
+    latEl.innerHTML=userLat;
+    lonEl.innerHTML=userLong;
+  }
+
+function addPegHandler(event) {
+    event.preventDefault();
 };
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -112,7 +117,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
   });
 
-btnAddPegEl.addEventListener("click",onSaveNewPlace);
+btnAddPegEl.addEventListener("click",addPegHandler);
 
 function error() {
     console.log("Sorry, no position available.");
