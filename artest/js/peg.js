@@ -44,7 +44,7 @@ myUser.models.push(witch)
 const reaper = new model("Reaper", "../assets/img/Reaper.glb",null,"../assets/img/Reaper.glb")
 myUser.models.push(reaper)
 
-console.log(myUser);
+console.log("myUser", myUser);
 
 
 
@@ -113,3 +113,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
 btnAddPegEl.addEventListener("click",onSaveNewPlace);
+const options = {
+    enableHighAccuracy: true, //accurate within inches
+    maximumAge: 500,
+    timeout: 1000, //Updates once per second
+  };
+  
+  const watchID = navigator.geolocation.watchPosition(success, error, options);

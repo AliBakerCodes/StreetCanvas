@@ -25,7 +25,7 @@ function updateItems() {
   document.getElementById("ar-button").style.display = "block";
   // document.getElementById("section1").style.display = "block";
 
-  const modelViewer = document.querySelector("model-viewer");
+  // const modelViewer = document.querySelector("model-viewer");
 
   if (nearestPlaces.length > 0) {
     //Set first element
