@@ -18,11 +18,11 @@ model-viewer {
 }
 #ar-button{
   position: absolute;
-  left:33%;
+  left:25%;
 }
 
 #inpt-radius{
-  width:10px;
+  width:15px;
 }
 
 .ar-button {
