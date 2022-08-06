@@ -41,13 +41,13 @@ function user(name, models){
 const myUser = new user("Ali");
 myUser["models"] = [];
 
-const astro = new model("Astronaught", "https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/NeilArmstrong.glb", "", "https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/img/neil.png");
+const astro = new model("Astronaught", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.glb", "", "https://purple-aardvark.s3.amazonaws.com/assets/img/neil.png");
 myUser.models.push(astro);
-const witch = new model("Fire Witch", "https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/3dmodels/Fire_Witch.glb", "https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/3dmodels/Fire_Witch.usdz","https://purple-aardvark.s3.amazonaws.com/assets/img/Fire_Witch.png");
+const witch = new model("Fire Witch", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Fire_Witch.glb", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Fire_Witch.usdz","https://purple-aardvark.s3.amazonaws.com/assets/img/Fire_Witch.png");
 myUser.models.push(witch);
-const drummer = new model("Toy Drummer", "","https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/3dModels/toy_drummer.usdz", "https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/img/Toy_Drummer.png");
+const drummer = new model("Toy Drummer", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/toy_drummer.glb","https://purple-aardvark.s3.amazonaws.com/assets/3dModels/toy_drummer.usdz", "https://purple-aardvark.s3.amazonaws.com/assets/img/Toy_Drummer.png");
 myUser.models.push(drummer);
-const baphomet = new model("Red Baphomet", "","https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/3dModels/Red_Baphomet.usdz", "https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/img/Red_Baphomet.png")
+const baphomet = new model("Red Baphomet", "sometext","https://purple-aardvark.s3.amazonaws.com/assets/3dModels/Red_Baphomet.usdz", "https://purple-aardvark.s3.amazonaws.com/assets/img/Red_Baphomet.png")
 myUser.models.push(baphomet)
 
 console.log("myUser", myUser);
