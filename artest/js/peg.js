@@ -87,8 +87,10 @@ function switchSrc(element, name) {
         console.log(model);
         if(model.glb !=""){ 
             modelViewer.setAttribute("src", model.glb);
+            modelViewer.setAttribute("ar-modes","webxr scene-viewer quick-look");
         } else {
-            modelViewer.setAttribute("src","null.glb");
+            modelViewer.setAttribute("ar-modes","webxr quick-look");
+            modelViewer.removeAttribute("src");
         };    
         if(model.usdz !=""){ 
             modelViewer.setAttribute("ios-src", model.usdz);
