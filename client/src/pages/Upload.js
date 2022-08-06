@@ -1,12 +1,12 @@
-import React from 'react';
-import explore from '../utils/images/explore.jpg'
+import React from "react";
+import upload from "../utils/images/upload.png";
 
 export default function Upload() {
-    return (
-        <div className="upload">
-            <h1>Upload</h1>
-            <img src={explore} alt="upload"></img>
-        
-        </div>
-    );
+  return (
+    <div className="upload">
+      <h1>Upload</h1>
+       {/* === Test image === */}
+      <img src={upload} alt="upload"></img>
+    </div>
+  );
 }
