@@ -62,9 +62,9 @@ genSlides = (user) => {
         mvContainerEl.classList.remove("HIDE");
         user.models.forEach((model) => {
             const slide =`<button class="slide selected" onclick="switchSrc(this, ${model.name})" style="background-image: url('${model.thumbnail}');">`
-            slides.innerHTML=slide;
+            slideContainerEL.innerHTML=slide;
         });
-        const firstSlide= getElementById("slides").firstChild
+        const firstSlide= slideContainerEL.firstChild
         console.log ("First Model: " + user.models[0].name);
         console.log ("First Slide Element: " + firstSlide);
         switchSrc(firstSlide, user.models[0].name);
@@ -103,7 +103,7 @@ function switchSrc(element, name) {
       }
     });
   };
-  
+
   function success(position) {
     userLat = position.coords.latitude;
     userLong= position.coords.longitude;
