@@ -1,6 +1,33 @@
-// import Container from "react-bootstrap/Container";
-// import Nav from "react-bootstrap/Nav";
-// import Navbar from "react-bootstrap/Navbar";
+import react from 'react';
+import boostrap from 'bootstrap';
+import reactbootstrap from 'react-bootstrap';
+import button from 'react-bootstrap/Button';
+
+function Footer (){
+    return (
+    
+              <footer className="footer mt-auto py-3 bg-light">
+        <div className="container row m-0 gx-3">
+            <div className="col">
+                <button type="button p-2" className="btn btn-outline-success btn-circle btn-md"></button>
+            </div>
+            <div className="col">
+                <button type="button p-2" className="btn btn-outline-success btn-circle btn-md"></button>     
+           </div>
+            <div className="col">
+                    <button type="button p-2" className="btn btn-outline-success btn-circle btn-md"></button>    
+            </div>
+            <div className="col">
+                <button type="button" className="btn btn-outline-success btn-circle btn-md"></button>
+            </div>
+        </div>
+      </footer>
+
+    )
+}
+
+export default Footer;
+
 
 // function NavTabs({ currentPage, handlePageChange }) {
 //     return (
