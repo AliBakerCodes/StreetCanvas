@@ -45,10 +45,12 @@ const astro = new model("Astronaught", "https://purple-aardvark.s3.amazonaws.com
 myUser.models.push(astro);
 const witch = new model("Fire Witch", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Fire_Witch.glb", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Fire_Witch.usdz","https://purple-aardvark.s3.amazonaws.com/assets/img/Fire_Witch.png");
 myUser.models.push(witch);
-const drummer = new model("Toy Drummer", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/toy_drummer.glb","https://purple-aardvark.s3.amazonaws.com/assets/3dModels/toy_drummer.usdz", "https://purple-aardvark.s3.amazonaws.com/assets/img/Toy_Drummer.png");
+const drummer = new model("Selknam Demon", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Selknam_demon.glb","https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Selknam_demon.usdz", "https://purple-aardvark.s3.amazonaws.com/assets/img/Selknam_Demon.png");
 myUser.models.push(drummer);
-const baphomet = new model("Red Baphomet", "sometext","https://purple-aardvark.s3.amazonaws.com/assets/3dModels/Red_Baphomet.usdz", "https://purple-aardvark.s3.amazonaws.com/assets/img/Red_Baphomet.png")
-myUser.models.push(baphomet)
+const baphomet = new model("Red Baphomet", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Red_Baphomet.glb","https://purple-aardvark.s3.amazonaws.com/assets/3dModels/Red_Baphomet.usdz", "https://purple-aardvark.s3.amazonaws.com/assets/img/Red_Baphomet.png")
+myUser.models.push(baphomet);
+const Genshin_Impact_Eula = new model("Genshin Impact - Eula", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Genshin_Impact_-_Eula.glb","https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Genshin_Impact_-_Eula.usdz", "https://purple-aardvark.s3.amazonaws.com/assets/img/genshin_impact_-_eula.png")
+myUser.models.push(Genshin_Impact_Eula);
 
 console.log("myUser", myUser);
 
