@@ -10,3 +10,5 @@ export default function Upload() {
     </div>
   );
 }
+
+// place the image

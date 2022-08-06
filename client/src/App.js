@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+// import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Upload from './pages/Upload';
 import GetLocation from './pages/GetLocation';
 import GoLive from './pages/GoLive';

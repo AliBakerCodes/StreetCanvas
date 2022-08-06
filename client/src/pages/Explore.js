@@ -10,3 +10,5 @@ export default function Explore() {
     </div>
   );
 }
+
+//the map
