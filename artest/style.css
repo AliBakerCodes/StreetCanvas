@@ -25,6 +25,7 @@ model-viewer {
   background-color: #fff;
   position: absolute;
   left: 50%;
+  margin: 0,10px,0,10px;
   transform: translateX(-50%);
   white-space: nowrap;
   bottom: 132px;
