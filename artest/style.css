@@ -20,6 +20,11 @@ model-viewer {
   position: absolute;
   left:33%;
 }
+
+#inpt-radius{
+  width:40px;
+}
+
 .ar-button {
   background-color: #fff;
   position: absolute;
