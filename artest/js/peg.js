@@ -64,7 +64,7 @@ genSlides = (user) => {
         noModelsEl.classList.add("HIDE");
         mvContainerEl.classList.remove("HIDE");
         user.models.forEach((model) => {
-            const slide =`<button class="slide selected" onclick="switchSrc(this, '${model.name}')" style="background-image: url('${model.thumbnail}');">`
+            const slide =`<button class="slide selected" id="${model.name}" onclick="switchSrc(this, '${model.name}')" style="background-image: url('${model.thumbnail}');">`
             slideContainerEL.innerHTML+=slide;
         });
         const firstSlide= slideContainerEL.firstChild
@@ -126,7 +126,13 @@ function switchSrc(element, name) {
 
 function addPegHandler(event) {
     event.preventDefault();
-    onSaveNewPlace(userLat,userLong, radiusEL.value,myUser)
+    let targetModel = document.querySelector(".selected");
+    let name=targetModel.id;
+    myUser.models.forEach((model) => {
+        if (model.name == name) {
+            onSaveNewPlace(userLat,userLong, radiusEL.value,model)
+        };
+    });
 
 };
 
