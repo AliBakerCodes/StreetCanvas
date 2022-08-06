@@ -79,7 +79,7 @@ genSlides(myUser);
 
 //Listen clicks on slides
 function switchSrc(element, name) {
-    user.models.forEach((model) => {
+    myUser.models.forEach((model) => {
       if (model.name == name) {
         console.log(model);
   
@@ -103,6 +103,7 @@ function switchSrc(element, name) {
       }
     });
   };
+  
   function success(position) {
     userLat = position.coords.latitude;
     userLong= position.coords.longitude;
