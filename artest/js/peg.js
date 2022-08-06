@@ -41,13 +41,13 @@ function user(name, models){
 const myUser = new user("Ali");
 myUser["models"] = [];
 
-const astro = new model("Astronaught", "./assets/3dmodels/NeilArmstrong.glb", "", "./assets/img/neil.png");
+const astro = new model("Astronaught", "https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/NeilArmstrong.glb", "", "https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/img/neil.png");
 myUser.models.push(astro);
-const witch = new model("Fire Witch", "./assets/3dmodels/Fire_Witch.glb", "./assets/3dmodels/Fire_Witch.usdz","./assets/img/Fire_Witch.png");
+const witch = new model("Fire Witch", "https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/3dmodels/Fire_Witch.glb", "https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/3dmodels/Fire_Witch.usdz","https://purple-aardvark.s3.amazonaws.com/assets/img/Fire_Witch.png");
 myUser.models.push(witch);
-const drummer = new model("Toy Drummer", "","./assets/3dModels/toy_drummer.usdz", "./assets/img/Toy_Drummer.png");
+const drummer = new model("Toy Drummer", "","https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/3dModels/toy_drummer.usdz", "https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/img/Toy_Drummer.png");
 myUser.models.push(drummer);
-const baphomet = new model("Red Baphomet", "","./assets/3dModels/Red_Baphomet.usdz", "./assets/img/Red_Baphomet.png")
+const baphomet = new model("Red Baphomet", "","https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/3dModels/Red_Baphomet.usdz", "https://purple-aardvark.s3.amazonaws.com/3dmodels/assets/img/Red_Baphomet.png")
 myUser.models.push(baphomet)
 
 console.log("myUser", myUser);

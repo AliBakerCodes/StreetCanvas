@@ -71,14 +71,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 //Listen clicks on slides
-window.switchSrc = (element, name) => {
-  nearestPlaces.forEach((place) => {
-    if (place.name == name) {
-      console.log(place);
-
-      modelViewer.src = place.glb; //Cambia el modelo 3d
-      modelViewer.setAttribute("ios-src", place.usdz);
-
+function switchSrc(element, name) {
+  myUser.models.forEach((model) => {
+    if (model.name == name) {
+      console.log(model);
+      if(model.glb !=""){ 
+          modelViewer.setAttribute("src", model.glb);
+          modelViewer.setAttribute("ar-modes","webxr scene-viewer quick-look");
+      } else {
+          modelViewer.setAttribute("ar-modes","webxr quick-look");
+          modelViewer.removeAttribute("src");
+      };    
+      if(model.usdz !=""){ 
+          modelViewer.setAttribute("ios-src", model.usdz);
+      } else {
+          modelViewer.removeAttribute("ios-src");
+      };
       //Cambia el selected del boton
       const slides = document.querySelectorAll(".slide");
       slides.forEach((element) => {
@@ -89,12 +97,33 @@ window.switchSrc = (element, name) => {
       let header_container = document.getElementById("header-container");
       header_container.innerHTML = "";
       let h2 = document.createElement("H2");
-      let t = document.createTextNode(`${place.name}`); // Create a text node
+      let t = document.createTextNode(`${model.name}`); // Create a text node
       h2.appendChild(t);
       header_container.appendChild(h2);
     }
   });
 };
+
+genSlides = (user) => {
+  if(user.models){
+      noModelsEl.classList.add("HIDE");
+      mvContainerEl.classList.remove("HIDE");
+      user.models.forEach((model) => {
+          const slide =`<button class="slide selected" id="${model.name}" onclick="switchSrc(this, '${model.name}')" style="background-image: url('${model.thumbnail}');">`
+          slideContainerEL.innerHTML+=slide;
+      });
+      const firstSlide= slideContainerEL.firstChild
+      console.log ("First Model: " + user.models[0].name);
+      console.log ("First Slide Element: " + firstSlide);
+      switchSrc(firstSlide, user.models[0].name);
+  } else {
+      mvContainerEl.classList.add("HIDE");
+      noModelsEl.classList.remove("HIDE");
+  }
+  
+}
+
+
 
 //GPS
 let nearestPlaces = [];
@@ -114,6 +143,7 @@ function success(position) {
   if (!is_same) {
     nearestPlaces = nearestPlacesUpdated;
     newItemsFound = true;
+    genSlides()
     document.getElementById("updateContainer").style.display = "block";
     document.getElementById("ar-button").style.display = "none";
     // document.getElementById("section1").style.display = "none";
