@@ -86,6 +86,8 @@ function switchSrc(element, name) {
         modelViewer.setAttribute("src", model.glb);
         if(model.usdz !=""){ 
             modelViewer.setAttribute("ios-src", model.usdz);
+        } else {
+            modelViewer.removeAttribute("ios-src");
         };
         //Cambia el selected del boton
         const slides = document.querySelectorAll(".slide");
