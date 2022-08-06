@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="artest/style.css" />
+
+    <!-- Import the component -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </head>
+
+  <body>
+    
+
+    <div id="header-container"></div>
+    <div id="s" class="HIDE"><p>No Models Found <a href="/upload">Upload a Model</a></p></div>
+    <div id="mvContainer">
+      <model-viewer
+        id="model-viewer"
+        src=""
+        shadow-intensity="1"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        ar-scale="auto"
+        camera-controls
+        alt="A 3D model carousel"
+        reveal: auto
+      >
+        Lattitude: <span id="dispLat"></span> <br />
+        Longitude:<span id="dispLon"></span>
+        <button style="display: none" slot="ar-button" id="ar-button">
+          Augmented Reality
+        </button>
+        <button id="btnAddPeg">Add Peg</button>
+        <div id="slider" class="slider">
+          <div class="slides" id="slide-container"></div>
+        </div>
+      </model-viewer>
+    </div>
+    
+    <script type="text/javascript" src="artest/js/places.js"></script>
+    <script type="text/javascript" src="artest/js/location.js"></script>
+    <script type="text/javascript" src="artest/js/index.js"></script>
+  </body>
+</html>

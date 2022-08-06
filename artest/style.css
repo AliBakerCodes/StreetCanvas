@@ -18,10 +18,6 @@ model-viewer {
 }
 
 #ar-button {
-  background-image: url(../../assets/ic_view_in_ar_new_googblue_48dp.png);
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  background-position: 12px 50%;
   background-color: #fff;
   position: absolute;
   left: 50%;
@@ -136,4 +132,8 @@ model-viewer > #ar-prompt > img {
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+}
+
+.HIDE {
+  display: none;
 }
