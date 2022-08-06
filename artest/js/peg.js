@@ -84,8 +84,11 @@ function switchSrc(element, name) {
     myUser.models.forEach((model) => {
       if (model.name == name) {
         console.log(model);
-  
-        modelViewer.setAttribute("src", model.glb);
+        if(model.usdz !=""){ 
+            modelViewer.setAttribute("src", model.glb);
+        } else {
+            modelViewer.removeAttribute("src");
+        };    
         if(model.usdz !=""){ 
             modelViewer.setAttribute("ios-src", model.usdz);
         } else {
