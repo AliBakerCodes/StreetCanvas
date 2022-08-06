@@ -64,9 +64,10 @@ genSlides = (user) => {
             const slide =`<button class="slide selected" onclick="switchSrc(this, ${model.name})" style="background-image: url('${model.thumbnail}');">`
             slides.innerHTML=slide;
         });
+        const firstSlide= getElementById("slides").firstChild
         console.log ("First Model: " + user.models[0].name);
-        console.log ("First Slide Element: " + slides[0]);
-        switchSrc(slides[0], user.models[0].name);
+        console.log ("First Slide Element: " + firstSlide);
+        switchSrc(firstSlide user.models[0].name);
     } else {
         mvContainerEl.classList.add("HIDE");
         noModelsEl.classList.remove("HIDE");
