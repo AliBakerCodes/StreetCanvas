@@ -46,7 +46,7 @@ const witch = new model("Fire Witch", "./assets/3dmodels/Fire_Witch.glb", "./ass
 myUser.models.push(witch);
 const drummer = new model("Toy Drummer", "./assets/3dModels/toy_drummer.glb","", "./assets/img/Toy_Drummer.png");
 myUser.models.push(drummer);
-const baphomet = new model("Red Baphomet", "","./assets/3dModels/Red_Baphomet.glb", "./assets/img/Red_Baphomet.png")
+const baphomet = new model("Red Baphomet", "","./assets/3dModels/Red_Baphomet.usdz", "./assets/img/Red_Baphomet.png")
 myUser.models.push(baphomet)
 
 console.log("myUser", myUser);
