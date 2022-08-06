@@ -40,11 +40,13 @@ function user(name, models){
 const myUser = new user("Ali");
 myUser["models"] = [];
 
-const astro = new model("Astronaught", "./assets/3dmodels/NeilArmstrong.glb", "", "./assets/img/neil.png")
-myUser.models.push(astro)
-const witch = new model("Fire Witch", "./assets/3dmodels/Fire_Witch.glb", "./assets/3dmodels/Fire_Witch.usdz","./assets/img/Fire_Witch.png")
-myUser.models.push(witch)
-const reaper = new model("Toy Drummer", "./assets/3dModels/toy_drummer.glb","", "./assets/img/Toy_Drummer.png")
+const astro = new model("Astronaught", "./assets/3dmodels/NeilArmstrong.glb", "", "./assets/img/neil.png");
+myUser.models.push(astro);
+const witch = new model("Fire Witch", "./assets/3dmodels/Fire_Witch.glb", "./assets/3dmodels/Fire_Witch.usdz","./assets/img/Fire_Witch.png");
+myUser.models.push(witch);
+const drummer = new model("Toy Drummer", "./assets/3dModels/toy_drummer.glb","", "./assets/img/Toy_Drummer.png");
+myUser.models.push(drummer);
+const baphomet = new model("Red Baphomet", "","./assets/3dModels/Red_Baphomet.glb", "./assets/img/Red_Baphomet.png")
 myUser.models.push(reaper)
 
 console.log("myUser", myUser);
@@ -112,8 +114,8 @@ function switchSrc(element, name) {
     console.log("Your latitude: " + userLat, "Your longitude: " + userLong);
     const latEl = document.querySelector("#dispLat");
     const lonEl = document.querySelector("#dispLon");
-    latEl.innerHTML=toFixed(userLat);
-    lonEl.innerHTML=toFixed(userLong);
+    latEl.innerHTML=toFixed(userLat,6);
+    lonEl.innerHTML=toFixed(userLong,6);
   }
 
 function addPegHandler(event) {
