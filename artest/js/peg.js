@@ -53,7 +53,7 @@ function toFixed(num, fixed) {
     return num.toString().match(re)[0];
 };
 
-function genSlides(user){
+genSlides = (user) => {
     if(user.models){
         noModelsEl.classList.add("HIDE");
         mvContainerEl.classList.remove("HIDE");
@@ -113,6 +113,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
 btnAddPegEl.addEventListener("click",onSaveNewPlace);
+
+function error() {
+    console.log("Sorry, no position available.");
+    alert(
+      "No pudimos acceder a tu ubicacion. ¡Debes activarla para descubrir que cosas hay a tu alrededor!"
+    );
+  }
+
+
+
 const options = {
     enableHighAccuracy: true, //accurate within inches
     maximumAge: 500,
