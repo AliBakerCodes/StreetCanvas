@@ -65,7 +65,7 @@ genSlides = (user) => {
         });
         console.log ("First Model: " + user.models[0].name);
         console.log ("First Slide Element: " + slides[0]);
-        window.switchSrc(slides[0], user.models[0].name);
+        switchSrc(slides[0], user.models[0].name);
     } else {
         mvContainerEl.classList.add("HIDE");
         noModelsEl.classList.remove("HIDE");
