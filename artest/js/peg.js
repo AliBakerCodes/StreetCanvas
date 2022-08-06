@@ -47,7 +47,7 @@ myUser.models.push(witch);
 const drummer = new model("Toy Drummer", "./assets/3dModels/toy_drummer.glb","", "./assets/img/Toy_Drummer.png");
 myUser.models.push(drummer);
 const baphomet = new model("Red Baphomet", "","./assets/3dModels/Red_Baphomet.glb", "./assets/img/Red_Baphomet.png")
-myUser.models.push(reaper)
+myUser.models.push(baphomet)
 
 console.log("myUser", myUser);
 
