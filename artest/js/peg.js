@@ -44,7 +44,7 @@ const astro = new model("Astronaught", "./assets/3dmodels/NeilArmstrong.glb", ""
 myUser.models.push(astro);
 const witch = new model("Fire Witch", "./assets/3dmodels/Fire_Witch.glb", "./assets/3dmodels/Fire_Witch.usdz","./assets/img/Fire_Witch.png");
 myUser.models.push(witch);
-const drummer = new model("Toy Drummer", "./assets/3dModels/toy_drummer.glb","", "./assets/img/Toy_Drummer.png");
+const drummer = new model("Toy Drummer", "./assets/3dModels/toy_drummer.glb","./assets/3dModels/toy_drummer.usdz", "./assets/img/Toy_Drummer.png");
 myUser.models.push(drummer);
 const baphomet = new model("Red Baphomet", "","./assets/3dModels/Red_Baphomet.usdz", "./assets/img/Red_Baphomet.png")
 myUser.models.push(baphomet)
