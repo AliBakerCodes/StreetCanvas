@@ -62,6 +62,7 @@ genSlides = (user) => {
         mvContainerEl.classList.remove("HIDE");
         user.models.forEach((model) => {
             const slide =`<button class="slide selected" onclick="switchSrc(this, ${model.name})" style="background-image: url('${model.thumbnail}');">`
+            slider.appendChild(slide);
         });
         console.log ("First Model: " + user.models[0].name);
         console.log ("First Slide Element: " + slides[0]);
