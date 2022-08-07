@@ -149,9 +149,6 @@ btnAddPegEl.addEventListener("click",addPegHandler);
 
 function error() {
     console.log("Sorry, no position available.");
-    alert(
-      "No pudimos acceder a tu ubicacion. ¡Debes activarla para descubrir que cosas hay a tu alrededor!"
-    );
   }
 
 
