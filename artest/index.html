@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="artest/style.css" />
+
+    <!-- Import the component -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </head>
+
+  <body>
+    
+
+    <div id="header-container"></div>
+    <model-viewer
+      id="model-viewer"
+      src="null.glb"
+      poster="../../assets/ShopifyModels/Chair.png"
+      shadow-intensity="1"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      camera-controls
+      alt="A 3D model carousel"
+    >
+      <button style="display: none" slot="ar-button" id="ar-button">
+        Augmented Reality
+      </button>
+
+      <div id="slider" class="slider">
+        <div class="slides"></div>
+      </div>
+    </model-viewer>
+
+    <div id="updateContainer" style="margin-top: 20px; display: none">
+      <b style="color: green; float: left; margin: 0 10px 0 0">
+        New objects has been found
+      </b>
+      <button id="btnUpdate" class="update-button">Update</button>
+    </div>
+    <p>Lattitude: <span id="dispLat"></span> Longitude:<span id="dispLon"></span></p>
+    <p>Peg Location</p>
+    <form id="form">
+      <label for="fname">Name:</label><br />
+      <input type="text" id="name" /><br />
+      <label for="fname">Latitude:</label><br />
+      <input type="number" id="lat" step="any" /><br />
+      <label for="lname">Longitude:</label><br />
+      <input type="number" id="lon" step="any" /><br /><br />
+      <label for="lname">Radius:</label><br />
+      <input type="number" id="rad" step="any" /><br /><br />
+      <button id="btnUseLoc">Use Current Location</button>
+      <button id="btnAddPeg">Add Peg</button>
+    </form>
+    
+    <script type="text/javascript" src="artest/js/places.js"></script>
+    <script type="text/javascript" src="artest/js/location.js"></script>
+    <script type="text/javascript" src="artest/js/index.js"></script>
+  </body>
+</html>
