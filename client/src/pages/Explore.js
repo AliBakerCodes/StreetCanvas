@@ -5,7 +5,7 @@ export default function Explore() {
   return (
     <div className="explore">
       <h1>Explore</h1>
-       {/* === Test image === */}
+      {/* === Test image === */}
       <img src={explore} alt="explore"></img>
     </div>
   );

@@ -1,14 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Upload from './pages/Upload';
 import GetLocation from './pages/GetLocation';
 import GoLive from './pages/GoLive';
 import Explore from './pages/Explore';
 
+
 const client = new ApolloClient({
-  uri: '/graphql',
-  cache: new InMemoryCache(),
+  uri: 'http://localhost:8080/graphql',
+  cache: new InMemoryCache()
 });
 
 function App() {
@@ -17,19 +19,19 @@ function App() {
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
-            <Route 
-              path="/upload" 
+            <Route
+              path="/upload"
               element={<Upload />}
             />
-            <Route 
-              path="/getlocation" 
+            <Route
+              path="/getlocation"
               element={<GetLocation />}
             />
-            <Route 
-              path="/golive" 
+            <Route
+              path="/golive"
               element={<GoLive />}
             />
-            <Route 
+            <Route
               path="/explore"
               element={<Explore />}
             />
