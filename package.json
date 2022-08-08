@@ -5,7 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js --ignore client",
-    "develop": "concurrently \"npm run start\" \"npm run client\"",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && set HTTPS=true SSL_CRT_FILE=./.cert/cert.pem SSL_KEY_FILE=./.cert/key.pem && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "dev": "nodemon server/index.js",
     "client": "cd client/p3 && npm start",

@@ -1,0 +1,14 @@
+import { useEffect } from 'react';
+const importModelScript = resourceUrl=> {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = resourceUrl;
+    script.async = true;
+    script.type = 'module';
+    document.body.appendChild(script);
+return () => {
+      document.body.removeChild(script);
+    }
+  }, [resourceUrl]);
+};
+export default importModelScript;
