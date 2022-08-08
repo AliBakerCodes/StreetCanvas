@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Upload from './pages/Upload';
-import GetLocation from './pages/GetLocation';
+import AddPeg from './pages/AddPeg';
 import GoLive from './pages/GoLive';
 import Explore from './pages/Explore';
 
@@ -17,13 +17,17 @@ function App() {
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
+          {/* <Route 
+              path="/" 
+              element={<Home />}
+            /> */}
             <Route 
               path="/upload" 
               element={<Upload />}
             />
             <Route 
-              path="/getlocation" 
-              element={<GetLocation />}
+              path="/addPeg" 
+              element={<AddPeg />}
             />
             <Route 
               path="/golive" 
