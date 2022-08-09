@@ -4,6 +4,7 @@ const UserSchema = new mongoose.Schema({
 
     username: {
         type: String,
+        default: null,
         require: true,
         min: 3,
         max: 20,
@@ -22,7 +23,12 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         require: true,
-        min: 8
+        min: 8,
+        max: 20
+    },
+
+    token: {
+        type: String
     }
 },
     { timestamps: true }
