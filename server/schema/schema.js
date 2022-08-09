@@ -80,16 +80,18 @@ const mutation = new GraphQLObjectType({
                 email: { type: GraphQLNonNull(GraphQLString) },
                 password: { type: GraphQLNonNull(GraphQLString) }
             },
-            resolve(parent, args) {
-                const user = new User({
-                    username: args.username,
-                    email: args.email,
-                    password: args.password
-                });
-                return user.save();
+
+            async resolve(parent, args) {
+                const { username, email, password } = args
+                const user = new User({ username, email, password })
+
+                await user.save()
+                const token = createJWT(user)
+                return JSON.stringify(token)
             }
         },
 
+        //User Login
         loginUser: {
             type: UserType,
             args: {
