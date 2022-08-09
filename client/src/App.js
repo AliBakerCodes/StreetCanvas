@@ -6,6 +6,7 @@ import Upload from './pages/Upload';
 import AddPeg from './pages/AddPeg';
 import GoLive from './pages/GoLive';
 import Explore from './pages/Explore';
+import Login from './pages/Login';
 
 
 const client = new ApolloClient({
@@ -23,6 +24,10 @@ function App() {
               path="/" 
               element={<Home />}
             /> */}
+            <Route
+              path="/login"
+              element={<Login />}
+            />
             <Route
               path="/upload"
               element={<Upload />}
