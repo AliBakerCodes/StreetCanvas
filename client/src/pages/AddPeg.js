@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 export default function AddPeg() {
   return (
     <div id="add-peg-container">
@@ -14,6 +14,7 @@ export default function AddPeg() {
         ar-scale="auto"
         camera-controls
         alt="A 3D model carousel"
+        reveal= "auto"
       >
         Lattitude: <span id="dispLat"></span> <br />
         Longitude:<span id="dispLon"></span> <br />
