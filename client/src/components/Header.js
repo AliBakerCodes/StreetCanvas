@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function Header(){
     return(
+<div id="header-container">
 <Navbar className="navbar navbar-dark bg-primary w-100">
 <div className="container-fluid">
     <span className="navbar-brand mb-0 h1"> Street Canvas</span>
@@ -24,6 +25,7 @@ function Header(){
 
 </div>
 </Navbar>
+</div>
     )
 }
 
