@@ -2,6 +2,7 @@ import React from "react";
 // import Button from 'react-bootstrap/Button';
 
 function Header(){
+    return(
 <nav className="navbar navbar-dark bg-primary w-100">
 <div className="container-fluid">
     <span className="navbar-brand mb-0 h1"> Street Canvas</span>
@@ -18,8 +19,8 @@ function Header(){
     </button>
 
 </div>
-
 </nav>
+    )
 }
 
 export default Header;

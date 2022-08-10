@@ -1,9 +1,10 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import Navbar from "react-bootstrap/Navbar";
 
 function Footer({ currentPage, handlePageChange }) {
   return (
-    <Footer className="footer mt-auto py-3 bg-light">
+    <Navbar fixed="bottom" className="footer mt-auto py-3 bg-light">
       <div className="container row m-0 gx-3">
       <div className="col">
             <Button
@@ -57,7 +58,7 @@ function Footer({ currentPage, handlePageChange }) {
             </Button>
         </div>
       </div>
-    </Footer>
+</Navbar>
   );
 }
 
