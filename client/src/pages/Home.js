@@ -1,7 +1,7 @@
 export default function Home() {
     return (
     <div>
-      <h1 className ="text-center">Welcome to Street Canvas</h1>
+      <h2 className ="text-center">Welcome to Street Canvas</h2>
     </div>
 
 
