@@ -1,9 +1,11 @@
-const jwt = require('jsonwebtoken')
+// const jwt = require('jsonwebtoken');
 
-const createJWT = user => {
-    return jwt.sign(user, "key", {
-        expiresIn: "10 days"
-    })
-}
+// const secret = process.env.JWT_SECRET;
+// const expiration = process.env.JWT_EXPIRES_IN;
 
-module.exports = { createJWT }
+// module.exports = {
+//     signToken: function ({ email, name, _id }) {
+//         const payload = { email, name, _id };
+//         return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+//     },
+// };
