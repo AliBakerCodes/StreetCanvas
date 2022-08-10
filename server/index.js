@@ -8,28 +8,37 @@ const port = process.env.PORT || 8080;
 const { createJWT } = require('./utils/auth')
 const { authenticate } = require('./utils/authMiddleware')
 
-const https = require('https');
-const fs = require('fs');
-
-const options = {
-  key: fs.readFileSync('.cert/key.pem'),
-  cert: fs.readFileSync('.cert/cert.pem')
-};
-
+const path = require('path');
 const app = express();
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
 
-https.createServer(options, app).listen(3002);
-
-
-connectDB();
-
-app.use(cors());
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 
 app.use('/graphql', graphqlHTTP({
   schema,
   graphiql: process.env.NODE_ENV === 'development'
 }));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+connectDB();
+
+app.use(cors());
+
+
+
+app.use('/graphql', graphqlHTTP({
+  schema,
+  graphiql: process.env.NODE_ENV === 'development'
+}));
+
 
 app.listen(port, console.log(`Server running on port ${port}`));
 
