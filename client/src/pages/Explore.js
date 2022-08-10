@@ -1,14 +1,22 @@
-import React from "react";
-import explore from "../utils/images/explore.jpg";
+import { useQuery } from '@apollo/client'
+import { GET_USERS } from '../queries/getAllUsers'
 
-export default function Explore() {
-  return (
-    <div className="explore">
-      <h1>Explore</h1>
-      {/* === Test image === */}
-      <img src={explore} alt="explore"></img>
-    </div>
-  );
-}
 
-//the map
+export default function Users() {
+
+  const { loading, error, data } = useQuery(GET_USERS)
+
+  if (loading) return <p>LOADING...</p>
+  if (error) return <p>ERROR... </p>
+  return (<>
+    <div>A list of all know users:</div>
+    {
+      data.users.map((user) => (
+        <div key={user.id} value={user.username}>username: {user.username}
+        </div>
+      ))
+    }
+  </>)
+
+
+};

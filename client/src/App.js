@@ -10,6 +10,8 @@ import Home from './pages/Home';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Login from './pages/Login';
+import Home from './pages/Home'
+
 
 const client = new ApolloClient({
   uri: 'http://localhost:8080/graphql',
