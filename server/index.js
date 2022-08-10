@@ -5,10 +5,20 @@ const { graphqlHTTP } = require('express-graphql')
 const schema = require('./schema/schema')
 const connectDB = require('./config/db')
 const port = process.env.PORT || 8080;
+const { createJWT } = require('./utils/auth')
 
+const https = require('https');
+const fs = require('fs');
 
+const options = {
+  key: fs.readFileSync('.cert/key.pem'),
+  cert: fs.readFileSync('.cert/cert.pem')
+};
 
 const app = express();
+
+https.createServer(options, app).listen(3002);
+
 
 connectDB();
 
@@ -21,3 +31,7 @@ app.use('/graphql', graphqlHTTP({
 
 app.listen(port, console.log(`Server running on port ${port}`));
 
+
+app.get('/authtest', (req, res) => {
+  res.json(createJWT({ username: "username1", email: "username1@gmail.com", password: "12345678" }));
+})

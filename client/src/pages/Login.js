@@ -1,3 +1,4 @@
+// <<<<<<< HEAD
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
@@ -27,3 +28,17 @@ function BasicExample() {
 }
 
 export default BasicExample;
+// =======
+
+
+// export default function GoLive() {
+//     return (
+//         <div className="golive">
+//             <h1>LOGIN</h1>
+
+//         </div>
+//     );
+// }
+
+
+// >>>>>>> 33dc04a9b7220640255727fd841a41630b85bd68

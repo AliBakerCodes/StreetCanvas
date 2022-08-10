@@ -9,6 +9,7 @@ import Explore from './pages/Explore';
 import Home from './pages/Home';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Login from './pages/Login';
 
 const client = new ApolloClient({
   uri: 'http://localhost:8080/graphql',
@@ -25,6 +26,10 @@ function App() {
             <Route 
               path="/" 
               element={<Home />}
+            />
+            <Route
+              path="/login"
+              element={<Login />}
             />
             <Route
               path="/upload"

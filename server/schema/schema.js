@@ -10,7 +10,8 @@ const UserType = new GraphQLObjectType({
         id: { type: GraphQLID },
         username: { type: GraphQLString },
         email: { type: GraphQLString },
-        password: { type: GraphQLString }
+        password: { type: GraphQLString },
+        token: { type: GraphQLString }
     })
 });
 
@@ -26,7 +27,9 @@ const PinType = new GraphQLObjectType({
         lat: { type: GraphQLString },
         lon: { type: GraphQLString },
         URL: { type: GraphQLString },
-        filename: { type: GraphQLString },
+        radius: { type: GraphQLString },
+        glb: { type: GraphQLString },
+        usdz: { type: GraphQLString }
     })
 });
 
@@ -70,7 +73,7 @@ const mutation = new GraphQLObjectType({
     fields: {
 
         //Create new User
-        addUser: {
+        registerUser: {
             type: UserType,
             args: {
                 username: { type: GraphQLNonNull(GraphQLString) },
@@ -84,6 +87,15 @@ const mutation = new GraphQLObjectType({
                     password: args.password
                 });
                 return user.save();
+            }
+        },
+
+        loginUser: {
+            type: UserType,
+            args: {
+                email: { type: GraphQLNonNull(GraphQLString) },
+                password: { type: GraphQLNonNull(GraphQLString) }
+
             }
         },
 
@@ -110,7 +122,9 @@ const mutation = new GraphQLObjectType({
                 lat: { type: GraphQLNonNull(GraphQLString) },
                 lon: { type: GraphQLNonNull(GraphQLString) },
                 URL: { type: GraphQLNonNull(GraphQLString) },
-                filename: { type: GraphQLNonNull(GraphQLString) }
+                radius: { type: GraphQLNonNull(GraphQLString) },
+                glb: { type: GraphQLString },
+                usdz: { type: GraphQLString }
             },
             resolve(parent, args) {
                 const pin = new Pin({
@@ -121,7 +135,9 @@ const mutation = new GraphQLObjectType({
                     lat: args.lat,
                     lon: args.lon,
                     URL: args.URL,
-                    filename: args.filename,
+                    radius: args.radius,
+                    glb: args.glb,
+                    usdz: args.usdz
                 });
                 return pin.save();
             }
