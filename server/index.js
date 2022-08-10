@@ -8,6 +8,7 @@ const port = process.env.PORT || 8080;
 const { createJWT } = require('./utils/auth')
 
 const app = express();
+
 connectDB();
 
 app.use(cors());
