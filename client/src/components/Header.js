@@ -1,13 +1,14 @@
 import React from "react";
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
+import Navbar from 'react-bootstrap/Navbar';
 
 function Header(){
     return(
-<nav className="navbar navbar-dark bg-primary w-100">
+<Navbar className="navbar navbar-dark bg-primary w-100">
 <div className="container-fluid">
     <span className="navbar-brand mb-0 h1"> Street Canvas</span>
 
-    <button 
+    <Button 
         className="navbar-toggler" 
         type="button" 
         data-bs-toggle="collapse" 
@@ -16,10 +17,10 @@ function Header(){
         aria-expanded="false" 
         aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
-    </button>
+    </Button>
 
 </div>
-</nav>
+</Navbar>
     )
 }
 
