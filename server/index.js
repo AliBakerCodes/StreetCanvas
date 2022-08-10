@@ -7,6 +7,7 @@ const connectDB = require('./config/db')
 const port = process.env.PORT || 8080;
 const { createJWT } = require('./utils/auth')
 
+const path = require('path');
 const app = express();
 // Serve up static assets
 if (process.env.NODE_ENV === 'production') {
