@@ -2,7 +2,7 @@
   "name": "street-canvas",
   "version": "1.0.0",
   "description": "",
-  "main": "server/server.js",
+  "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",
     "develop": "concurrently \"npm run start\" \"npm run client\"",
@@ -41,5 +41,8 @@
     "react-slick": "^0.29.0",
     "webpack": "^4.44.2",
     "webpack-dev-server": "^3.11.0"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
