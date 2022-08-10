@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "cd client && npm install && npm run build",
     "develop": "concurrently \"npm run start\" \"npm run client\"",
     "dev": "nodemon server/index.js",
     "client": "cd client && npm start",
@@ -15,7 +15,6 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.3.0",
-    "dotenv": "^16.0.1",
     "nodemon": "^2.0.19"
   },
   "dependencies": {
@@ -24,6 +23,7 @@
     "babel-loader": "^8.1.0",
     "bootstrap": "^5.2.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "eslint": "^7.11.0",
     "express": "^4.18.1",
     "express-graphql": "^0.12.0",
