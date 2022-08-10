@@ -7,18 +7,7 @@ const connectDB = require('./config/db')
 const port = process.env.PORT || 8080;
 const { createJWT } = require('./utils/auth')
 
-const https = require('https');
-const fs = require('fs');
-
-const options = {
-  key: fs.readFileSync('.cert/key.pem'),
-  cert: fs.readFileSync('.cert/cert.pem')
-};
-
 const app = express();
-
-https.createServer(options, app).listen(3002);
-
 
 connectDB();
 
