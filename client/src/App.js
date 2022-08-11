@@ -1,11 +1,40 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+
+import { setContext } from '@apollo/client/link/context';
 import Upload from './pages/Upload';
 import AddPeg from './pages/AddPeg';
 import GoLive from './pages/GoLive';
 import Explore from './pages/Explore';
+import Home from './pages/Home';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Login from './pages/Login';
+import Signup from './pages/Signup'
+
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+
+const authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token = localStorage.getItem('id_token');
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
 
 
 const client = new ApolloClient({
@@ -16,13 +45,25 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      <Header />
       <Router>
-        <div className="flex-column justify-center align-center min-100-vh bg-primary">
-          <Routes>
-            {/* <Route 
+
+        {/* <div className="flex-column justify-center align-center min-100-vh bg-primary"> */}
+        
+        <Routes>
+            <Route 
               path="/" 
+
               element={<Home />}
-            /> */}
+            />
+            <Route
+              path="/login"
+              element={<Login />}
+            />
+            <Route
+              path="/signup"
+              element={<Signup />}
+            />
             <Route
               path="/upload"
               element={<Upload />}
@@ -40,10 +81,12 @@ function App() {
               element={<Explore />}
             />
           </Routes>
-        </div>
+        {/* </div> */}
       </Router>
+      <Footer />
     </ApolloProvider>
   );
 }
 
 export default App;
+

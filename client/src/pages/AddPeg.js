@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function AddPeg() {
   return (
     <div id="add-peg-container">
@@ -9,6 +8,7 @@ export default function AddPeg() {
       <model-viewer
         id="model-viewer"
         src="https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.glb"
+        ios_src="https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.usdz"
         shadow-intensity="1"
         ar
         ar-modes="webxr scene-viewer quick-look"

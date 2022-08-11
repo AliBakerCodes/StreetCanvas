@@ -10,3 +10,16 @@ li:hover {
     font-size: 10px;
     text-align: center;
 }
+
+.row {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    justify-content: center;
+    display: flex;
+    margin: 0;
+}
