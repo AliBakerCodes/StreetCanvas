@@ -47,10 +47,13 @@ function App() {
     <ApolloProvider client={client}>
       <Header />
       <Router>
-        <div className="flex-column justify-center align-center min-100-vh bg-primary">
-          <Routes>
-            <Route
-              path="/"
+
+        {/* <div className="flex-column justify-center align-center min-100-vh bg-primary"> */}
+        
+        <Routes>
+            <Route 
+              path="/" 
+
               element={<Home />}
             />
             <Route
@@ -78,7 +81,7 @@ function App() {
               element={<Explore />}
             />
           </Routes>
-        </div>
+        {/* </div> */}
       </Router>
       <Footer />
     </ApolloProvider>
