@@ -12,19 +12,19 @@ import Header from './components/Header';
 import Login from './pages/Login';
 
 const client = new ApolloClient({
-  uri: '/graphql',
+  uri: 'http://localhost:8080/graphql',
   cache: new InMemoryCache()
 });
 
 function App() {
   return (
-     <ApolloProvider client={client}>
-     <Header/>
+    <ApolloProvider client={client}>
+      <Header />
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
-            <Route 
-              path="/" 
+            <Route
+              path="/"
               element={<Home />}
             />
             <Route
@@ -50,8 +50,8 @@ function App() {
           </Routes>
         </div>
       </Router>
-      <Footer/>
-     </ApolloProvider>
+      <Footer />
+    </ApolloProvider>
   );
 }
 

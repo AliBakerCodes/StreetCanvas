@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 
-const PinSchema = new mongoose.Schema({
+const PinSchema = new Schema({
 
     username: {
         type: String,
@@ -35,8 +35,19 @@ const PinSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+
+    radius: {
+        type: String,
+        required: true
+    },
+
     //use regex 
-    filename: {
+    glb: {
+        type: String,
+        required: true
+    },
+
+    usdz: {
         type: String,
         required: true
     },
@@ -46,4 +57,6 @@ const PinSchema = new mongoose.Schema({
     { timestamps: true }
 )
 
-module.exports = mongoose.model("Pin", PinSchema)
+const Pin = model('Pin', PinSchema);
+
+module.exports = Pin;

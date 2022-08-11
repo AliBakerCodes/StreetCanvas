@@ -1,15 +1,15 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new Schema({
 
     username: {
         type: String,
-        default: null,
         require: true,
         min: 3,
         max: 20,
-        unique: true
+        unique: true,
+        trim: true
     },
 
     email: {
@@ -28,28 +28,38 @@ const UserSchema = new mongoose.Schema({
         max: 20
     },
 
+    pins: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Pin'
+        }
+    ],
+
     token: {
         type: String
     }
 },
-    { timestamps: true }
+
 )
 
 
-// // set up pre-save middleware to create password
-// profileSchema.pre('save', async function (next) {
-//     if (this.isNew || this.isModified('password')) {
-//         const saltRounds = 10;
-//         this.password = await bcrypt.hash(this.password, saltRounds);
-//     }
+// set up pre-save middleware to create password
+UserSchema.pre('save', async function (next) {
+    if (this.isNew || this.isModified('password')) {
+        const saltRounds = 10;
+        this.password = await bcrypt.hash(this.password, saltRounds);
+    }
 
-//     next();
-// });
+    next();
+});
 
-// // compare the incoming password with the hashed password
-// profileSchema.methods.isCorrectPassword = async function (password) {
-//     return bcrypt.compare(password, this.password);
-// };
+// compare the incoming password with the hashed password
+UserSchema.methods.isCorrectPassword = async function (password) {
+    return bcrypt.compare(password, this.password);
+};
 
 
-module.exports = mongoose.model("User", UserSchema)
+
+const User = model('User', UserSchema);
+
+module.exports = User;
