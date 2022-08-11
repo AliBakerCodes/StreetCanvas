@@ -18,8 +18,9 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
+    "body-parser": "*",
     "dotenv": "^16.0.1",
-    "exprese": "*"
+    "express": "*"
   },
   "engines": {
     "node": "16.x"
