@@ -14,7 +14,7 @@ function Footer({ currentPage, handlePageChange }) {
                 <Button
                 type="button p-2"
                 variant="outline-success"
-                  href="#upload"
+                  href="/upload"
                   onClick={() => handlePageChange("Upload")}
                   className={`btn btn-outline-success btn-circle btn-md ${
                     currentPage === "Upload" ? "nav-link active" : "nav-link"
@@ -28,7 +28,7 @@ function Footer({ currentPage, handlePageChange }) {
               <Button
               type="button p-2"
               variant="outline-success"
-                href="#addPeg"
+                href="/addPeg"
                 onClick={() => handlePageChange("AddPeg")}
                 className={`btn btn-outline-success btn-circle btn-md ${
                   currentPage === "AddPeg" ? "nav-link active" : "nav-link"
@@ -42,7 +42,7 @@ function Footer({ currentPage, handlePageChange }) {
               <Button
               type="button p-2"
               variant="outline-success"
-                href="#goLive"
+                href="/goLive"
                 onClick={() => handlePageChange("GoLive")}
                 className={`btn btn-outline-success btn-circle btn-md ${
                   currentPage === "GoLive" ? "nav-link active" : "nav-link"
@@ -56,7 +56,7 @@ function Footer({ currentPage, handlePageChange }) {
                 <Button
                 type="button p-2"
                 variant="outline-success"
-                  href="#explore"
+                  href="/explore"
                   onClick={() => handlePageChange("Explore")}
                   className={`btn btn-outline-success btn-circle btn-md ${
                     currentPage === "Explore" ? "nav-link active" : "nav-link"
