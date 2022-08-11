@@ -3,27 +3,26 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
     type User {
 
-        _id: ID
-        username: String
-        email: String
-        password: String
+        _id: ID!
+        username: String!
+        email: String!
+        password: String!
         pins: [Pin]!
 
     }
 
        type Pin {
 
-        _id: ID
-        username: String
-        title: String
+        _id: ID!
+        username: User!
+        title: String!
         thumbnail: String
         description: String
-        lat: String
-        lon: String
-        URL: String
-        radius: String
-        glb: String
-        usdz: String
+        lat: String!
+        URL: String!
+        radius: String!
+        glb: String!
+        usdz: String!
         
     }
 
@@ -47,7 +46,7 @@ const typeDefs = gql`
         me: User
 
         #Gets pins from user
-        pinsUser(username: String): [Pin]
+        pinsUser(username: String!): [Pin]
 
         #Gets pin from pin ID
         pin(pinId: ID!): Pin

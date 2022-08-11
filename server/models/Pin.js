@@ -3,8 +3,8 @@ const { Schema, model } = require('mongoose');
 const PinSchema = new Schema({
 
     username: {
-        type: String,
-        required: true,
+        type: Schema.Types.ObjectId,
+        ref: "User",
     },
 
     title: {
