@@ -1,15 +1,14 @@
-// <<<<<<< HEAD
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-function BasicExample() {
+function Login() {
   return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
         <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
+          We'll never share your email with anyone else. ;D
         </Form.Text>
       </Form.Group>
 
@@ -21,24 +20,13 @@ function BasicExample() {
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
       <Button variant="primary" type="submit">
-        Submit
+        Log in
+      </Button>
+      <Button variant="secondary" type="submit">
+        Sign up
       </Button>
     </Form>
   );
 }
 
-export default BasicExample;
-// =======
-
-
-// export default function GoLive() {
-//     return (
-//         <div className="golive">
-//             <h1>LOGIN</h1>
-
-//         </div>
-//     );
-// }
-
-
-// >>>>>>> 33dc04a9b7220640255727fd841a41630b85bd68
+export default Login;
