@@ -36,20 +36,38 @@ export const DELETE_USER = gql`
   }
 `;
 
-// export const ADD_PIN = gql`
-//   mutation addPin() {
-//     addPin() {
+export const ADD_PIN = gql`
+  mutation addPin( $username: User!,
+        $title: String!,
+        $thumbnail: String,
+        $description: String,
+        $lat: String!,
+        $URL: String!,
+        $radius: String!,
+        $glb: String!,
+        $usdz: String!) {
+    addPin( username: $username
+        title: $title
+        thumbnail: $thumbnail
+        description: $description
+        lat: $lat
+        URL: $URL
+        radius: $radius
+        glb: $glb
+        usdz: $usdz) {
      
-//       }
-//     }
-//   }
-// `;
+      }
+    }
+  }
+`;
 
-// export const DELETE_PIN = gql`
-//   mutation deletePin() {
-//     deletePin() {
-      
-//       }
-//     }
-//   }
-// `;
+export const DELETE_PIN = gql`
+  mutation deletePin($pinId: ID!) {
+    deletePin(pinId: $pinId) {
+      pin{
+        _id
+      }
+      }
+    }
+  }
+`;
