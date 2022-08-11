@@ -2,9 +2,9 @@
   "name": "street-canvas",
   "version": "1.0.0",
   "description": "",
-  "main": "server/index.js",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "node server/server.js",
     "develop": "concurrently \"npm run start\" \"npm run client\"",
     "dev": "nodemon server/index.js",
     "client": "cd client && npm start",
@@ -18,18 +18,7 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
-    "@apollo/client": "^3.6.9",
-    "bcrypt": "^5.0.1",
-    "bootstrap": "^5.2.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "express-graphql": "^0.12.0",
-    "graphql": "^15.8.0",
-    "https": "^1.0.0",
-    "jest": "^26.6.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.5.1"
+    "dotenv": "^16.0.1"
   },
   "engines": {
     "node": "16.x"
