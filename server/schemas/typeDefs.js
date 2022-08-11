@@ -19,6 +19,7 @@ const typeDefs = gql`
         thumbnail: String
         description: String
         lat: String!
+        lon: String!
         URL: String!
         radius: String!
         glb: String!
@@ -74,7 +75,7 @@ const typeDefs = gql`
         deleteUser(userId: ID!) : User
         
         #Add new pin
-        addPin(username: String!, title: String!, thumbnail: String, description: String, lat: String!, lon: String!, URL: String!, radius: String!, glb: String!, usdz: String!): Pin
+        addPin(username: String! title: String!, thumbnail: String, description: String, lat: String!, lon: String!, URL: String!, radius: String!, glb: String!, usdz: String!): Pin
 
         #Delete pin
         deletePin(pinId: ID!): Pin

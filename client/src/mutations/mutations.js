@@ -37,28 +37,27 @@ export const DELETE_USER = gql`
 `;
 
 export const ADD_PIN = gql`
-  mutation addPin( $username: User!,
-        $title: String!,
+        mutation addPin($username: String!, $title: String!,
         $thumbnail: String,
         $description: String,
         $lat: String!,
+        $lon: String!,
         $URL: String!,
         $radius: String!,
         $glb: String!,
         $usdz: String!) {
-    addPin( username: $username
-        title: $title
-        thumbnail: $thumbnail
-        description: $description
-        lat: $lat
-        URL: $URL
-        radius: $radius
-        glb: $glb
+    addPin( username: $username,
+        title: $title,
+        thumbnail: $thumbnail,
+        description: $description,
+        lat: $lat,
+        URL: $URL,
+        radius: $radius,
+        glb: $glb,
         usdz: $usdz) {
-     
+        _id
       }
     }
-  }
 `;
 
 export const DELETE_PIN = gql`
@@ -66,8 +65,7 @@ export const DELETE_PIN = gql`
     deletePin(pinId: $pinId) {
       pin{
         _id
-      }
-      }
+      }   
     }
   }
 `;
