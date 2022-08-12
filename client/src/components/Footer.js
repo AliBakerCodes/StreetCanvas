@@ -4,12 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import FileUploadIcon from '@mui/icons-material/FileUpload';
-import PlaceIcon from '@mui/icons-material/Place';
-import SportsMartialArtsIcon from '@mui/icons-material/SportsMartialArts';
-import PublicIcon from '@mui/icons-material/Public';
 import { useNavigate } from 'react-router-dom';
-
 
 function Footer({ currentPage, handlePageChange }) {
   let navigate = useNavigate();
@@ -26,8 +21,7 @@ function Footer({ currentPage, handlePageChange }) {
                     currentPage === "Upload" ? "nav-link active" : "nav-link"
                   }`}
                 >
-                  {/* icons */}
-                  <FileUploadIcon/>
+                  Upload
                 </Button>
           </Col>
 
@@ -40,7 +34,7 @@ function Footer({ currentPage, handlePageChange }) {
                   currentPage === "AddPeg" ? "nav-link active" : "nav-link"
                 }`}
               >
-                <PlaceIcon />
+                Add Peg
               </Button>
           </Col>
 
@@ -53,21 +47,20 @@ function Footer({ currentPage, handlePageChange }) {
                   currentPage === "GoLive" ? "nav-link active" : "nav-link"
                 }`}
               >
-                <SportsMartialArtsIcon/>
+                Go Live
               </Button>
           </Col>
 
           <Col>
                 <Button
                 type="button p-2"
-
                 variant="outline-success"
                   onClick={() => navigate("/explore")}
                   className={`btn btn-outline-success btn-circle btn-md ${
                     currentPage === "Explore" ? "nav-link active" : "nav-link"
                   }`}
                 >
-                  <PublicIcon  />
+                  Explore
                 </Button>
           </Col>
         </Row>
