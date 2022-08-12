@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../mutations/mutations';
-import Footer from "../components/Footer";
+
 
 import Auth from '../auth/decode';
 
@@ -95,7 +95,6 @@ const Login = (props) => {
           </div>
         </div>
       </div>
-      <Footer/>
     </main>
   );
 };
