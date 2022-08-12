@@ -25,7 +25,7 @@ export default function AddPeg() {
         Longitude:<span id="dispLon"></span> <br />
         <input type="number" id="inpt-radius" /> m radius <br />
         <button className="ar-button" id="add-peg-btn">Add Peg</button>
-            <button className="ar-button"slot="ar-button" id="ar-button">Place in World</button>
+            {/* <button className="ar-button"slot="ar-button" id="ar-button">Place in World</button> */}
         <div id="slider" className="slider">
           <div className="slides" id="slide-container"></div>
         </div>
