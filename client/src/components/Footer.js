@@ -1,4 +1,5 @@
 import React from "react";
+import "../pages/style.css";
 import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
 import Container from 'react-bootstrap/Container';
@@ -20,7 +21,7 @@ function Footer({ currentPage, handlePageChange }) {
           <Col>
                 <Button
                 type="button p-2"
-                variant="outline-success"
+                variant="outline-warning"
                   onClick={() => navigate("/upload")}
                   className={`btn btn-outline-success btn-circle btn-md ${
                     currentPage === "Upload" ? "nav-link active" : "nav-link"
@@ -34,7 +35,7 @@ function Footer({ currentPage, handlePageChange }) {
           <Col>
               <Button
               type="button p-2"
-              variant="outline-success"
+              variant="outline-danger"
                 onClick={() => navigate("/addPeg")}
                 className={`btn btn-outline-success btn-circle btn-md ${
                   currentPage === "AddPeg" ? "nav-link active" : "nav-link"
@@ -61,7 +62,7 @@ function Footer({ currentPage, handlePageChange }) {
                 <Button
                 type="button p-2"
 
-                variant="outline-success"
+                variant="outline-info"
                   onClick={() => navigate("/explore")}
                   className={`btn btn-outline-success btn-circle btn-md ${
                     currentPage === "Explore" ? "nav-link active" : "nav-link"
