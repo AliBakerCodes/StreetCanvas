@@ -4,6 +4,11 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import FileUploadIcon from '@mui/icons-material/FileUpload';
+import PlaceIcon from '@mui/icons-material/Place';
+import SportsMartialArtsIcon from '@mui/icons-material/SportsMartialArts';
+import PublicIcon from '@mui/icons-material/Public';
+
 
 function Footer({ currentPage, handlePageChange }) {
   return (
@@ -13,28 +18,29 @@ function Footer({ currentPage, handlePageChange }) {
           <Col>
                 <Button
                 type="button p-2"
-                variant="outline-success"
+                variant="outline-warning"
                   href="/upload"
                   onClick={() => handlePageChange("Upload")}
                   className={`btn btn-outline-success btn-circle btn-md ${
                     currentPage === "Upload" ? "nav-link active" : "nav-link"
                   }`}
                 >
-                  Upload
+                  {/* icons */}
+                  <FileUploadIcon/>
                 </Button>
           </Col>
 
           <Col>
               <Button
               type="button p-2"
-              variant="outline-success"
+              variant="outline-danger"
                 href="/addPeg"
                 onClick={() => handlePageChange("AddPeg")}
                 className={`btn btn-outline-success btn-circle btn-md ${
                   currentPage === "AddPeg" ? "nav-link active" : "nav-link"
                 }`}
               >
-                Add Peg
+                <PlaceIcon />
               </Button>
           </Col>
 
@@ -48,21 +54,21 @@ function Footer({ currentPage, handlePageChange }) {
                   currentPage === "GoLive" ? "nav-link active" : "nav-link"
                 }`}
               >
-                Go Live
+                <SportsMartialArtsIcon/>
               </Button>
           </Col>
 
           <Col>
                 <Button
                 type="button p-2"
-                variant="outline-success"
+                variant="outline-info"
                   href="/explore"
                   onClick={() => handlePageChange("Explore")}
                   className={`btn btn-outline-success btn-circle btn-md ${
                     currentPage === "Explore" ? "nav-link active" : "nav-link"
                   }`}
                 >
-                  Explore
+                  <PublicIcon  />
                 </Button>
           </Col>
         </Row>
