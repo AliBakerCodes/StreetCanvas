@@ -5,38 +5,25 @@ import React, { useState, useEffect } from 'react';
 import Footer from "../components/Footer";
 import useGeolocation from "../components/geoLocation";
 
-
 function Explore() {
   const location = useGeolocation()
-  // <GeolocateControl
-  //   style={geolocateControlStyle}
-  //   positionOptions={{ enableHighAccuracy: true }}
-  //   trackUserLocation={true}
-  //   onGeolocate={(position) => {
-  //     // get latitude and longitude of user current location
-  //     setNewLocation([position.coords.latitude, position.coords.longitude]);
-  //   }}
-  // />
 
-  // const [viewport, setViewport] = useState({
-  //   latitude
-  // })
+  { location.loaded ? JSON.stringify(location) && console.log(JSON.stringify(location)) : "Location data not available yet." }
 
   return (
     <>
       <ReactMapGL
         initialViewState={{
-          longitude: location.lon,
-          latitude: location.lat,
-          zoom: 3.5
+          longitude: location.coordinates.lon,
+          latitude: location.coordinates.lat,
+          zoom: 5
         }}
         style={{ width: '100vw', height: '100vh' }}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
+        mapStyle="mapbox://styles/ianjustinferris/cl1ya9otw001515qmp86s6l21"
         mapboxAccessToken='pk.eyJ1IjoiaWFuanVzdGluZmVycmlzIiwiYSI6ImNsNmdxNmRkNDA2Z2IzaW53ZmZoZDU0NHgifQ.Pcg0JsdtFLHvd2EWFI4_mA'
       >;
-
+        <GeolocateControl />
       </ReactMapGL>
-      <div>{location.loaded ? JSON.stringify(location) : "Location data not available yet."}</div>
       <Footer />
     </>)
 };
