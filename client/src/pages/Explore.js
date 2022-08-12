@@ -5,8 +5,6 @@ import React, { useState, useEffect } from 'react';
 import Footer from "../components/Footer";
 import useGeolocation from "../components/geoLocation";
 
-
-
 function Explore() {
   const location = useGeolocation()
 
@@ -14,7 +12,6 @@ function Explore() {
 
   return (
     <>
-
       <ReactMapGL
         initialViewState={{
           longitude: location.coordinates.lon,
@@ -27,8 +24,6 @@ function Explore() {
       >;
         <GeolocateControl />
       </ReactMapGL>
-
-
       <Footer />
     </>)
 };
