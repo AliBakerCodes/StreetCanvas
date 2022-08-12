@@ -8,11 +8,11 @@ export default function AddPeg() {
     <div id="mvContainer">
       <model-viewer
         id="model-viewer"
-        src="https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.glb"
-        ios_src="https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.usdz"
+        src="http://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.glb"
+        ios_src="http://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.usdz"
         shadow-intensity="1"
         ar
-        ar-modes="webxr scene-viewer quick-look"
+        ar-modes="scene-viewer quick-look webxr"
         ar-scale="auto"
         camera-controls
         alt="A 3D model carousel"
