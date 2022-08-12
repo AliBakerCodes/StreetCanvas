@@ -1,5 +1,6 @@
 import React from "react";
 export default function AddPeg() {
+  const modelRef=React.useRef();
   return (
     <div id="add-peg-container">
     <div id="header-container"></div>
@@ -16,6 +17,9 @@ export default function AddPeg() {
         camera-controls
         alt="A 3D model carousel"
         reveal= "auto"
+        ref={(ref)=>{
+            modelRef.current= ref;
+        }}
       >
         Lattitude: <span id="dispLat"></span> <br />
         Longitude:<span id="dispLon"></span> <br />
