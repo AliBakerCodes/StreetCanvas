@@ -11,6 +11,7 @@ class AuthService {
         return token && !this.isTokenExpired(token) ? true : false;
     }
 
+
     isTokenExpired(token) {
         // Decode the token to get its expiration time that was set by the server
         const decoded = decode(token);
@@ -31,6 +32,7 @@ class AuthService {
         localStorage.setItem('id_token', idToken);
         window.location.assign('/');
     }
+
 
     logout() {
         localStorage.removeItem('id_token');
