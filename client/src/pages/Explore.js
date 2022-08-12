@@ -1,4 +1,3 @@
-
 import { Popup } from 'react-map-gl';
 import Map, { Marker } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
