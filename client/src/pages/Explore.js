@@ -1,10 +1,13 @@
-
-
+import Footer from "../components/Footer";
 
 
 export default function Users() {
   return (
-    <h1>explore</h1>
+    <div>
+      <h1>explore</h1>
+      <Footer/>
+  </div>
+    
   )
 
 };

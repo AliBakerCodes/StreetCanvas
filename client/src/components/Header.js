@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link} from 'react-router-dom'
+import Placeholder from 'react-bootstrap/Placeholder';
 
 // function Header(){
 //     return(
@@ -34,13 +35,13 @@ import { Link} from 'react-router-dom'
 
 function Header(){
     return(
-<Navbar bg="light" expand="lg">
-      <Container>
+<Navbar as="p" animation="glow" bg="light" expand="lg">
+      <Container >
         <Navbar.Brand as={Link} to="/">Street Canvas</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
+          <Nav className="m-auto justify-content-center align-items-center" xs={12}>
+            <Nav.Link  as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/login">Login</Nav.Link>
             <Nav.Link as={Link} to="/library">Library</Nav.Link>
             <NavDropdown title="Settings" id="basic-nav-dropdown">

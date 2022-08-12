@@ -5,6 +5,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../mutations/mutations';
 
 import Auth from '../auth/decode';
+import Footer from "../components/Footer";
 
 const Signup = () => {
     const [formState, setFormState] = useState({
@@ -96,7 +97,10 @@ const Signup = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </main>
+       
+        
     );
 };
 

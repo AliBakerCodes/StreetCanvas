@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../mutations/mutations';
+import Footer from "../components/Footer";
 
 import Auth from '../auth/decode';
 
@@ -74,7 +75,14 @@ const Login = (props) => {
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
-                  Submit
+                  Log in
+                </button>
+                <button
+                  className="btn btn-block btn-info"
+                  style={{ cursor: 'pointer' }}
+                  type="submit"
+                >
+                  Sign up
                 </button>
               </form>
             )}
@@ -87,9 +95,13 @@ const Login = (props) => {
           </div>
         </div>
       </div>
+      <Footer/>
     </main>
   );
 };
 
 export default Login;
+
+
+
 

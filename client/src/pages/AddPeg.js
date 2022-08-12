@@ -1,4 +1,7 @@
+import Footer from "../components/Footer";
 import React from "react";
+
+
 export default function AddPeg() {
   return (
     <div id="add-peg-container">
@@ -27,6 +30,8 @@ export default function AddPeg() {
         </div>
       </model-viewer>
     </div>
+    <Footer/>
     </div>
+   
   );
 }
