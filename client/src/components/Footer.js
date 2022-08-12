@@ -8,9 +8,11 @@ import FileUploadIcon from '@mui/icons-material/FileUpload';
 import PlaceIcon from '@mui/icons-material/Place';
 import SportsMartialArtsIcon from '@mui/icons-material/SportsMartialArts';
 import PublicIcon from '@mui/icons-material/Public';
+import { useNavigate } from 'react-router-dom';
 
 
 function Footer({ currentPage, handlePageChange }) {
+  let navigate = useNavigate();
   return (
     <Navbar fixed="bottom" className="footer mt-auto py-3 bg-light">
       <Container fluid='sm'>
@@ -18,9 +20,8 @@ function Footer({ currentPage, handlePageChange }) {
           <Col>
                 <Button
                 type="button p-2"
-                variant="outline-warning"
-                  href="/upload"
-                  onClick={() => handlePageChange("Upload")}
+                variant="outline-success"
+                  onClick={() => navigate("/upload")}
                   className={`btn btn-outline-success btn-circle btn-md ${
                     currentPage === "Upload" ? "nav-link active" : "nav-link"
                   }`}
@@ -33,9 +34,8 @@ function Footer({ currentPage, handlePageChange }) {
           <Col>
               <Button
               type="button p-2"
-              variant="outline-danger"
-                href="/addPeg"
-                onClick={() => handlePageChange("AddPeg")}
+              variant="outline-success"
+                onClick={() => navigate("/addPeg")}
                 className={`btn btn-outline-success btn-circle btn-md ${
                   currentPage === "AddPeg" ? "nav-link active" : "nav-link"
                 }`}
@@ -48,8 +48,7 @@ function Footer({ currentPage, handlePageChange }) {
               <Button
               type="button p-2"
               variant="outline-success"
-                href="/goLive"
-                onClick={() => handlePageChange("GoLive")}
+                onClick={() => navigate("/goLive")}
                 className={`btn btn-outline-success btn-circle btn-md ${
                   currentPage === "GoLive" ? "nav-link active" : "nav-link"
                 }`}
@@ -61,9 +60,9 @@ function Footer({ currentPage, handlePageChange }) {
           <Col>
                 <Button
                 type="button p-2"
-                variant="outline-info"
-                  href="/explore"
-                  onClick={() => handlePageChange("Explore")}
+
+                variant="outline-success"
+                  onClick={() => navigate("/explore")}
                   className={`btn btn-outline-success btn-circle btn-md ${
                     currentPage === "Explore" ? "nav-link active" : "nav-link"
                   }`}
