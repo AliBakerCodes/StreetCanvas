@@ -97,7 +97,7 @@ const resolvers = {
         // Add a third argument to the resolver to access data in our `context`
         addPin: async (parent, { title, thumbnail, description, lat, lon, radius, glb, usdz }, context) => {
             // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
-            if (context.user) {
+            if (user) {
                 const pin = await Pin.create({
                     username,
                     title,
