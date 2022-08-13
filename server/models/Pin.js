@@ -30,11 +30,6 @@ const PinSchema = new Schema({
         type: String,
         required: true
     },
-    //use regex 
-    URL: {
-        type: String,
-        required: true
-    },
 
     radius: {
         type: String,

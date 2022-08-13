@@ -63,7 +63,6 @@ export const QUERY_PIN_BY_ID = gql`
       description
       lat
       lon
-      URL
       radius
       glb
       usdz
@@ -83,7 +82,6 @@ export const QUERY_PIN_BY_RAD = gql`
       description
       lat
       lon
-      URL
       radius
       glb
       usdz
@@ -103,7 +101,6 @@ export const QUERY_PIN_BY_LAT_LON = gql`
       description
       lat
       lon
-      URL
       radius
       glb
       usdz
