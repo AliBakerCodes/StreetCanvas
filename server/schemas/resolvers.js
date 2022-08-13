@@ -7,7 +7,7 @@ const resolvers = {
     Query: {
         //Gets all users
         users: async () => {
-            return User.find();
+            return await User.find();
         },
 
         //Get username by id
@@ -15,9 +15,9 @@ const resolvers = {
             return User.findOne({ username });
         },
 
-        //Get username by email
+        // Get username by email
         userEmail: async (parent, { email }) => {
-            return User.findOne({ email });
+            return await User.findOne({ email });
         },
 
         //Get pin by username
