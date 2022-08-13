@@ -14,13 +14,12 @@ export default function Home() {
     
   });
     return (
-  
     <div>
      
       {loggedIn ? 
-      <div>Welcome to Street Canvas!<Footer/></div> :
-      <div><h2 className="text-center">Welcome to Street Canvas</h2>
-      <h3 className="text-center">Please Sign up or Login to get Started</h3></div> }
+      <div><h2 className="mainFont">Welcome to <span className="titleFont"> Street Canvas!</span></h2><Footer/></div> :
+      <div><h2 className="text-center mainFont">Welcome to <span className="titleFont">Street Canvas</span></h2>
+      <h3 className="text-center mainFont">Please Sign up or Login to get Started</h3></div> }
     </div>
   
 

@@ -1,0 +1,24 @@
+
+@font-face {
+    font-family: 'Kite-one';
+    src: url(./assets/fonts/Kite_One/KiteOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Degular Bold';
+    src: url(./assets/fonts/Degular/DegularDemo-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Hobeaux Rococeaux Sherman';
+    src: url(./assets/fonts/Hobeaux-Rococeaux/Hobeaux_Rococeaux_Demo-Sherman.otf);
+}
+
+.titleFont {
+    font-family: 'Hobeaux Rococeaux Sherman';
+    font-size: 50px;
+}
+
+.mainFont {
+    font-family: 'Kite-one';
+}
