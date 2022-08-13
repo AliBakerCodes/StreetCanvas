@@ -8,11 +8,12 @@ import { ADD_PIN, mutations } from "../mutations/mutations";
 export default function AddPeg() {
     const username=Auth.getUser().data.username;
     console.log("Auth", username);
+    console.log("LoggedIn", Auth.loggedIn)
     const modelRef=React.useRef();
     const location = useGeoLocation();
     console.log(location.coordinates.lat)
-    const lat=location.coordinates.lat;
-    const lon=location.coordinates.lon;
+    const lat=location.coordinates.lat.toString();
+    const lon=location.coordinates.lon.toString();
     const glb="https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.glb"
     const usdz="https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.usdz"
     { location.loaded ? JSON.stringify(location) && console.log(JSON.stringify(location)) : "Location data not available yet." }
