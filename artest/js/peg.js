@@ -41,7 +41,7 @@ function user(name, models){
 const myUser = new user("Ali");
 myUser["models"] = [];
 
-const astro = new model("Astronaught", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.glb", "", "https://purple-aardvark.s3.amazonaws.com/assets/img/neil.png");
+const astro = new model("Astronaught", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.glb", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.usdz", "https://purple-aardvark.s3.amazonaws.com/assets/img/NeilArmstrong.png");
 myUser.models.push(astro);
 const witch = new model("Fire Witch", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Fire_Witch.glb", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Fire_Witch.usdz","https://purple-aardvark.s3.amazonaws.com/assets/img/Fire_Witch.png");
 myUser.models.push(witch);
