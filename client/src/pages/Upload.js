@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 export default function Upload() {
   return (
-    <div className="upload">
+    <div className="upload mainFont">
       <h1>Upload</h1>
        {/* === Test image === */}
       <img src={upload} alt="upload"></img>

@@ -43,7 +43,7 @@ const Signup = () => {
     };
 
     return (
-        <main className="d-flex justify-content-center container-sm mb-4 mt-5">
+        <main className="d-flex justify-content-center container-sm mb-4 mt-5 mainFont">
             <div className="col-12 col-lg-8">
                 <div className="card">
                     <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
