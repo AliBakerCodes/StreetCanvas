@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import { Link, useNavigate } from 'react-router-dom';
+import { useMutation} from '@apollo/client';
 import { LOGIN_USER } from '../mutations/mutations';
 
+
 import Auth from '../auth/decode';
+// import Button from "react-bootstrap/Button";
+
 
 const Login = (props) => {
+  let navigate = useNavigate();
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
@@ -41,8 +45,9 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+    <>
+    <main className="d-flex justify-content-center container-sm mb-4 mt-5">
+      <div className="col-12 col-lg-8">
         <div className="card">
           <h4 className="card-header bg-dark text-light p-2">Login</h4>
           <div className="card-body">
@@ -52,9 +57,9 @@ const Login = (props) => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <form className="row d-flex justify-content-evenly" onSubmit={handleFormSubmit}>
                 <input
-                  className="form-input"
+                  className="form-input col-10"
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -62,7 +67,7 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="form-input col-10 mt-2"
                   placeholder="******"
                   name="password"
                   type="password"
@@ -70,20 +75,22 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-info"
+                  className="btn btn-block btn-info col-3 mt-2"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
                   Log in
                 </button>
+                {/* Need to change to signup */}
                 <button
-                  className="btn btn-block btn-info"
+                className="btn btn-block btn-success col-3 mt-2"
                   style={{ cursor: 'pointer' }}
-                  type="submit"
+                  onClick={() => navigate("/signup")}
                 >
-                  Sign up
-                </button>
+               Sign up
+              </button>
               </form>
+            
             )}
 
             {error && (
@@ -92,9 +99,12 @@ const Login = (props) => {
               </div>
             )}
           </div>
+          {/* End of card div */}
         </div>
       </div>
     </main>
+
+    </>
   );
 };
 
