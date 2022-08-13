@@ -34,7 +34,7 @@ To create this project, we used the following techonologies:
 
 
 ## Contribution
-![Ali Baker](https://github.com/AliBakerCodes), ![Erica Breig](https://github.com/EricaBreig), ![Ian Ferris](https://github.com/ianjustinferris), ![Mikhail Sookwah](https://github.com/Mikhail25)
+[Ali Baker](https://github.com/AliBakerCodes), [Erica Breig](https://github.com/EricaBreig), [Ian Ferris](https://github.com/ianjustinferris), [Mikhail Sookwah](https://github.com/Mikhail25)
 
 
 
