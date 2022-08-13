@@ -43,7 +43,6 @@ function updateItems() {
       button.style.cssText = `background-image: url(${place.image});`;
       slides.appendChild(button);
     });
-    //Cambia el texto del header
     let header_container = document.getElementById("header-container");
     header_container.innerHTML = "";
     let h2 = document.createElement("H2");
@@ -87,13 +86,11 @@ function switchSrc(element, name) {
       } else {
           modelViewer.removeAttribute("ios-src");
       };
-      //Cambia el selected del boton
       const slides = document.querySelectorAll(".slide");
       slides.forEach((element) => {
         element.classList.remove("selected");
       });
       element.classList.add("selected");
-      //Cambia el texto del header
       let header_container = document.getElementById("header-container");
       header_container.innerHTML = "";
       let h2 = document.createElement("H2");

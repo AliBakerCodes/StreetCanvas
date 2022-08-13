@@ -45,7 +45,6 @@ const astro = new model("Astronaught", "https://purple-aardvark.s3.amazonaws.com
 myUser.models.push(astro);
 const witch = new model("Fire Witch", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Fire_Witch.glb", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Fire_Witch.usdz","https://purple-aardvark.s3.amazonaws.com/assets/img/Fire_Witch.png");
 myUser.models.push(witch);
-const drummer = new model("Selknam Demon", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Selknam_demon.glb","https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Selknam_demon.usdz", "https://purple-aardvark.s3.amazonaws.com/assets/img/Selknam_Demon.png");
 myUser.models.push(drummer);
 const baphomet = new model("Red Baphomet", "https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/Red_Baphomet.glb","https://purple-aardvark.s3.amazonaws.com/assets/3dModels/Red_Baphomet.usdz", "https://purple-aardvark.s3.amazonaws.com/assets/img/Red_Baphomet.png")
 myUser.models.push(baphomet);
@@ -99,13 +98,13 @@ function switchSrc(element, name) {
         } else {
             modelViewer.removeAttribute("ios-src");
         };
-        //Cambia el selected del boton
+
         const slides = document.querySelectorAll(".slide");
         slides.forEach((element) => {
           element.classList.remove("selected");
         });
         element.classList.add("selected");
-        //Cambia el texto del header
+
         let header_container = document.getElementById("header-container");
         header_container.innerHTML = "";
         let h2 = document.createElement("H2");
