@@ -20,6 +20,17 @@ export const QUERY_SINGLE_USER = gql`
   }
 `;
 
+
+export const QUERY_SINGLE_USER_BY_EMAIL = gql`
+  query singleUser($email: String!) {
+    userEmail(email: $email) {
+      _id
+      username
+      pins
+    }
+  }
+`;
+
 export const QUERY_ME = gql`
   query me {
     me {

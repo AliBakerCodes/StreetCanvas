@@ -42,6 +42,9 @@ const typeDefs = gql`
         #Get users by username
         user(username : String!): User
 
+        #Get user by email
+        userEmail(email: String!): User
+
         # Because we have the context functionality in place to check a JWT and decode its data, we can use a query that will always find and return the logged in user's data
         #Gets current user using context
         me: User

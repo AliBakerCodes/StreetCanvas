@@ -15,6 +15,11 @@ const resolvers = {
             return User.findOne({ username });
         },
 
+        //Get username by email
+        userEmail: async (parent, { email }) => {
+            return User.findOne({ email });
+        },
+
         //Get pin by username
         pinsUser: async (parent, { username }) => {
             const params = username ? { username } : {};
