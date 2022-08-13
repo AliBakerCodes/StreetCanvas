@@ -5,22 +5,19 @@ import Auth from "../auth/decode"
 import { useQuery, useMutation } from "@apollo/client";
 import { ADD_PIN, mutations } from "../mutations/mutations";
 import { QUERY_SINGLE_USER_BY_EMAIL } from '../queries/queries';
+import { AsyncApollo } from "react-async-apollo";
+import { render } from "react-dom/cjs/react-dom.production.min";
 
 export default function AddPeg() {
-    const email=Auth.getUser().data.email;
-    console.log("Auth", email);
-    const { loading, data } = useQuery(QUERY_SINGLE_USER_BY_EMAIL,
-      {
-          variables: {email}
-      });
-      // const username = data.userEmail.map((user) => (
-      //     username=user.username
-      // ))
-    console.log("User data", data);
-    console.log("username", data.userEmail.username)
+    const username=Auth.getUser().data.username;
+    console.log("Auth", username);
     const modelRef=React.useRef();
     const location = useGeoLocation();
-  //   const username=me;
+    console.log(location.coordinates.lat)
+    const lat=location.coordinates.lat;
+    const lon=location.coordinates.lon;
+    const glb="https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.glb"
+    const usdz="https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.usdz"
     { location.loaded ? JSON.stringify(location) && console.log(JSON.stringify(location)) : "Location data not available yet." }
       const title="MyTitle";
       const thumbnail="https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.png";
@@ -43,7 +40,7 @@ export default function AddPeg() {
         }
       };
   
-  
+    
     return (
       <div id="add-peg-container">
       <div id="header-container">Add Peg</div>
