@@ -53,7 +53,7 @@ function App() {
             <Route 
               path="/" 
 
-              element={<Home />}
+              element={<Explore />}
             />
             <Route
               path="/login"
