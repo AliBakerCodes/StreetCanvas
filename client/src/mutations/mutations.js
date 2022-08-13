@@ -42,7 +42,6 @@ export const ADD_PIN = gql`
         $description: String,
         $lat: String!,
         $lon: String!,
-        $URL: String!,
         $radius: String!,
         $glb: String!,
         $usdz: String!) {
@@ -51,7 +50,6 @@ export const ADD_PIN = gql`
         thumbnail: $thumbnail,
         description: $description,
         lat: $lat,
-        URL: $URL,
         radius: $radius,
         glb: $glb,
         usdz: $usdz) {

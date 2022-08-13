@@ -20,7 +20,6 @@ const typeDefs = gql`
         description: String
         lat: String!
         lon: String!
-        URL: String!
         radius: String!
         glb: String!
         usdz: String!
