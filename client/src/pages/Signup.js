@@ -43,8 +43,8 @@ const Signup = () => {
     };
 
     return (
-        <main className="flex-row justify-center mb-4">
-            <div className="col-12 col-lg-10">
+        <main className="d-flex justify-content-center container-sm mb-4 mt-5">
+            <div className="col-12 col-lg-8">
                 <div className="card">
                     <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
                     <div className="card-body">
@@ -54,9 +54,9 @@ const Signup = () => {
                                 <Link to="/">back to the homepage.</Link>
                             </p>
                         ) : (
-                            <form onSubmit={handleFormSubmit}>
+                            <form className="row d-flex justify-content-evenly" onSubmit={handleFormSubmit}>
                                 <input
-                                    className="form-input"
+                                    className="form-input col-10 mt-2"
                                     placeholder="Your username"
                                     name="username"
                                     type="text"
@@ -64,7 +64,7 @@ const Signup = () => {
                                     onChange={handleChange}
                                 />
                                 <input
-                                    className="form-input"
+                                    className="form-input col-10 mt-2"
                                     placeholder="Your email"
                                     name="email"
                                     type="email"
@@ -72,7 +72,7 @@ const Signup = () => {
                                     onChange={handleChange}
                                 />
                                 <input
-                                    className="form-input"
+                                    className="form-input col-10 mt-2"
                                     placeholder="******"
                                     name="password"
                                     type="password"
@@ -80,7 +80,7 @@ const Signup = () => {
                                     onChange={handleChange}
                                 />
                                 <button
-                                    className="btn btn-block btn-info"
+                                    className="btn btn-block btn-info col-5 mt-2"
                                     style={{ cursor: 'pointer' }}
                                     type="submit"
                                 >
@@ -97,7 +97,7 @@ const Signup = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            {/* <Footer/> */}
         </main>
        
         
