@@ -18,7 +18,7 @@ export default function AddPeg() {
     const usdz="https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.usdz"
     { location.loaded ? JSON.stringify(location) && console.log(JSON.stringify(location)) : "Location data not available yet." }
       const title="MyTitle";
-      const thumbnail="https://purple-aardvark.s3.amazonaws.com/assets/3dmodels/NeilArmstrong.png";
+      const thumbnail="https://purple-aardvark.s3.amazonaws.com/assets/img/NeilArmstrong.png";
       const description="Neil Armstrong";
       const [radius, setRadius] = useState('');
     
