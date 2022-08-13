@@ -34,7 +34,7 @@ export default function AddPeg({name}) {
 
   return (
     <div id="add-peg-container">
-    <div id="header-container">Add Peg</div>
+    <div id="header-container mainFont">Add Peg</div>
     {Auth.loggedIn() ? (
     <div id="mvContainer">
       <model-viewer
@@ -56,7 +56,7 @@ export default function AddPeg({name}) {
         Longitude: {location.coordinates.lon} <br />
         <form onSubmit={handleFormSubmit}>
         <input type="number" id="inpt-radius" /> m radius <br />
-        <button className="ar-button" id="add-peg-btn" type="submit">Add Peg</button>
+        <button className="ar-button mainFont" id="add-peg-btn" type="submit">Add Peg</button>
         </form>
             {/* <button className="ar-button"slot="ar-button" id="ar-button">Place in World</button> */}
         <div id="slider" className="slider">
@@ -66,7 +66,7 @@ export default function AddPeg({name}) {
     <Footer/>
     </div>
     ) :(
-        <p>You Must Login to place Pin</p>
+        <p className="mainFonts">You Must Login to place Pin</p>
     )}
         </div>
   )

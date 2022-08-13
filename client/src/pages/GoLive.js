@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 export default function GoLive() {
   return (
-    <div className="golive">
+    <div className="golive mainFont">
       <h1>Go Live</h1>
        {/* === Test image === */}
       <img src={golive} alt="Go live"></img>
