@@ -15,7 +15,7 @@ const resolvers = {
             return User.findOne({ username });
         },
 
-        //Get username by email
+        // Get username by email
         userEmail: async (parent, { email }) => {
             return User.findOne({ email });
         },
