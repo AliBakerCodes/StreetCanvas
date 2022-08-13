@@ -4,9 +4,6 @@ import useGeoLocation from "../components/geoLocation";
 import Auth from "../auth/decode"
 import { useQuery, useMutation } from "@apollo/client";
 import { ADD_PIN, mutations } from "../mutations/mutations";
-import { QUERY_SINGLE_USER_BY_EMAIL } from '../queries/queries';
-import { AsyncApollo } from "react-async-apollo";
-import { render } from "react-dom/cjs/react-dom.production.min";
 
 export default function AddPeg() {
     const username=Auth.getUser().data.username;

@@ -9,7 +9,6 @@ import {
   ApolloProvider,
   createHttpLink,
 } from '@apollo/client';
-import {InitProvider} from 'react-async-apollo';
 import { setContext } from '@apollo/client/link/context';
 import Upload from './pages/Upload';
 import AddPeg from './pages/AddPeg';
@@ -46,7 +45,6 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <InitProvider client={client}>
       <Router>
         <Header />
         {/* <div className="flex-column justify-center align-center min-100-vh bg-primary"> */}
@@ -83,8 +81,7 @@ function App() {
             />
           </Routes>
         {/* </div> */}
-      </Router>
-      </InitProvider>      
+      </Router>     
     </ApolloProvider>
   );
 }
